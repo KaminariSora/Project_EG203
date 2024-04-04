@@ -1,11 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
 import Template from './Components/exercise_template';
+import Section1 from './Components/section1';
 
 function App() {
   return (
     <div>
-      <Template/>
+      <Section1 />
     </div>
   );
 }
