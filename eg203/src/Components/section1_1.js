@@ -78,6 +78,7 @@ const Section1_1 = () => {
             <div className="problem">
                 <p>{ImageStatus[currentSlide].title}</p>
                 <img src={ImageStatus[currentSlide].src}></img>
+                <img className='teacher' src="./Images/teacher.png"></img>
             </div>
             <div className="explanation">
                 <div className='slide-1'>

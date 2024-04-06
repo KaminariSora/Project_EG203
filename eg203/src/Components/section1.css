@@ -68,6 +68,14 @@ body {
     line-height: 3rem;
 }
 
+.teacher {
+    position: absolute;
+    right: -100px;
+    bottom: 0;
+    width: auto;
+    height: 100%;
+}
+
 .explanation {
     position: relative;
     max-width: 1256px;
@@ -75,6 +83,7 @@ body {
     height: 246px;
     background-color: #D9D9D9;
     margin-bottom: 30px;
+    font-size: 20px;
 }
 
 .slide-1 {
@@ -142,6 +151,10 @@ body {
     position: relative;
 }
 
+.input {
+    text-align: center;
+}
+
 .input input{
     background-color: #FFDE91;
     border: none;
@@ -188,6 +201,11 @@ footer {
     background-color: #E4E9EF;
 }
 
+.next-control:hover,
+.back-control:hover {
+    background: #FFDE91;
+}
+
 footer a {
     text-decoration: none;
     color: #333;
@@ -200,6 +218,14 @@ footer a {
 
     .title {
         font-size: 32px;
+    }
+
+    .teacher {
+        display: none;
+    }
+
+    .explanation {
+        font-size: 16px;
     }
 
     .next-control,
