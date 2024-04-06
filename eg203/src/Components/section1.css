@@ -188,6 +188,11 @@ footer {
     background-color: #E4E9EF;
 }
 
+footer a {
+    text-decoration: none;
+    color: #333;
+}
+
 @media only screen and (max-width:680px) {
     .logo {
         display: none;

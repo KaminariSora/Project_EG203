@@ -1,11 +1,11 @@
 import './App.css';
 import Template from './Components/exercise_template';
-import Section1 from './Components/section1';
+import Section1_1 from './Components/section1_1';
 
 function App() {
   return (
     <div>
-      <Section1 />
+      <Section1_1 />
     </div>
   );
 }

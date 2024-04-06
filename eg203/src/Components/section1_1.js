@@ -1,15 +1,28 @@
+import { Link } from 'react-router-dom'
 import './section1.css'
 import { useState, useEffect } from 'react'
 
-const Section1 = () => {
+const Section1_1 = () => {
     const [p_value, setP_value] = useState(0)
     const [w_value, setW_value] = useState(0)
     const [m_value, setM_value] = useState(0)
     const [currentSlide, setCurrentSlide] = useState(0)
+    const ImageStatus = [{
+        title: 'รูปแบบวัตถุอยุ่ในสมดุล',
+        src: './Images/Section1/Static.png'
+    },
+    {
+        title: 'กำลังมีการเคลื่อนที่',
+        src: './Images/Section1/Moving.png'
+    },
+    {
+        title: 'มีการเคลื่อนที่',
+        src: './Images/Section1/Static_Moving.png'
+    }]
     const slides = [{
         title: 'Slide 1',
         content:
-            'ข้อนี้เป็น Lab ที่ให้ Input ค่า P,w,M(บอกว่าMแทนค่าอะไร),เมื่อสังเกตการเคลื่อนที่แล้วอธิบาย ในสภาะวะสมดุลวัตถุจะอยู่กับที่โดยถ้า x=a/2 หรือ N กระทำที่ มุมขวา วัตถุจะอยู่ในสภาวะกำลังล้มไปข้างหน้า และ x หาได้จาก',
+            'ข้อนี้เป็น Lab ที่ให้ Input ค่า P,W,M(บอกว่าMแทนค่าอะไร),เมื่อสังเกตการเคลื่อนที่แล้วอธิบาย ในสภาะวะสมดุลวัตถุจะอยู่กับที่โดยถ้า x=a/2 หรือ N กระทำที่ มุมขวา วัตถุจะอยู่ในสภาวะกำลังล้มไปข้างหน้า และ x หาได้จาก',
         formular: ['W = Ph', 'X = Ph/W', 'P = F'],
         note:
             'ในการคิดถ้าวัตถุอยู่ในสมดุล และมีแรงเสียดทานระบบต้องสอดคล้องกับ สมการสมดุล และแรงเสียดทานด้วย'
@@ -18,9 +31,16 @@ const Section1 = () => {
         title: 'Slide 2',
         content:
             'ถ้าเพิ่ม P ขึ้นเรื่อยๆ จนค่า F มากสุด(F ) วัตถุจะกำลังเคลื่อนที่ โดย F  = MN(ถ้าเพิ่ม P ถึง F  จะเกิด R  ) และเมื่ออยู่ใน สภาวะ กำลังเคลื่อนที่ แรง N และ F  จะทำให้เกิด R  โดยหามุมของ R  ได้จาก',
-        formular: ['θ = tan<sup>-1</sup>M'],
+        formular: ['θ<sub>s</sub> = tan<sup>-1</sup>M<sub>s</sub>'],
         note:
             ''
+    },
+    {
+        title: 'Slide 3',
+        content:
+            'เมื่อวัตถุเริ่มเคลื่ยนที่ F  จะกลายเป็น F  โดยหาได้จาก F  = M N และแรงลัพธ์ R  มีมุม',
+        formular: ['θ<sub>s</sub> = tan<sup>-1</sup>M<sub>s</sub>'],
+        note: ''
     }]
 
     useEffect(() => {
@@ -46,13 +66,18 @@ const Section1 = () => {
         setCurrentSlide((prevSlide) => prevSlide - 1)
     }
 
+    function handleNextPage() {
+        // window.location.href ='./section1_2'
+        console.log('next-page')
+    }
+
     return (
         <div className="container">
             <img className="logo" src="./Images/LogoApp.png"></img>
             <div className="title">ส่วนที่ 1 ข้อที่ 1</div>
             <div className="problem">
-                <p>รูปแบบวัตถุอยู่ในสมดุล</p>
-                <img src="./Images/Section1_1.png"></img>
+                <p>{ImageStatus[currentSlide].title}</p>
+                <img src={ImageStatus[currentSlide].src}></img>
             </div>
             <div className="explanation">
                 <div className='slide-1'>
@@ -97,11 +122,11 @@ const Section1 = () => {
                 </div>
             </div>
             <footer>
-                <button className="back-control">ย้อนกลับ</button>
-                <button className="next-control">ข้อต่อไป</button>
+                <Link to="#" className="back-control">ย้อนกลับ</Link>
+                <Link to="/section1_2" className="next-control" onClick={handleNextPage}>ข้อต่อไป</Link>
             </footer>
         </div>
     )
 }
 
-export default Section1
+export default Section1_1
