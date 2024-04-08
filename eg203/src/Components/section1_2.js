@@ -43,12 +43,12 @@ const Section1_2 = () => {
             <div className="input" id="p-value">
                     <p>ใส่ค่า θ</p>
                     <label>θ = </label>
-                    <input type='number' placeholder="####"></input>
+                    <input type='range' min="0" max="100" className='range'></input>
                 </div>
             </div>
             <footer>
                 <Link to="/section1_1" className="back-control">ย้อนกลับ</Link>
-                <button className="next-control">ข้อต่อไป</button>
+                <Link to="/slider-test" className="next-control">ข้อต่อไป</Link>
             </footer>
         </div>
     );

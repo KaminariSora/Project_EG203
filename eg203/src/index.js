@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Section1_1 from './Components/section1_1';
 import Section1_2 from './Components/section1_2';
+import SliderTest from './Components/slider-test';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: "Section1_2",
     element: <Section1_2/>
+  },
+  {
+    path: "Slider-test",
+    element: <SliderTest/>
   }
 ]);
 

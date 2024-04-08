@@ -155,11 +155,55 @@ body {
     text-align: center;
 }
 
-.input input{
+.number {
     background-color: #FFDE91;
     border: none;
     height: 40px;
     text-align: center;
+}
+
+.range-container {
+    background: #FFDE91;
+    height: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.range {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 1px;
+    background: #333;
+    outline: none;
+    position: relative;
+}
+
+.range::before {
+    content: '';
+    height: 40px;
+    border-left: 1px solid black;
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+.range::after {
+    content: '';
+    height: 40px;
+    border-right: 1px solid black;
+    position: absolute;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: black;
+    z-index: 1;
+    cursor: pointer;
 }
 
 /* #p-value:after,
