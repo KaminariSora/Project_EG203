@@ -206,6 +206,13 @@ body {
     cursor: pointer;
 }
 
+label {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, 50%);
+}
+
 /* #p-value:after,
 #w-value:after {
     content: '';

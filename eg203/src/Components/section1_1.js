@@ -119,7 +119,7 @@ const Section1_1 = () => {
             <div className="answer">
                 <div className="input" id="p-value">
                     <p>ใส่ค่า P</p>
-                    {/* <label>P = </label> */}
+                    <label>{p_value}</label>
                     <input type='range' min="0" max="100" onChange={handleP_value} className='range'></input>
                 </div>
 
