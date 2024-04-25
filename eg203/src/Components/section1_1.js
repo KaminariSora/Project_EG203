@@ -8,6 +8,7 @@ const Section1_1 = () => {
     const [m_value, setM_value] = useState(0)
     const [currentSlide, setCurrentSlide] = useState(0)
     const [currentImage, setCurrentImage] = useState(0)
+    const [isOpen, setIsOpen] = useState(false);
     const ImageStatus = [{
         title: 'รูปแบบวัตถุอยุ่ในสมดุล',
         src: './Images/Section1/Static.png'
@@ -79,15 +80,33 @@ const Section1_1 = () => {
         setCurrentSlide((prevSlide) => prevSlide - 1)
     }
 
-    function handleNextPage() {
-        // window.location.href ='./section1_2'
-        console.log('next-page')
-    }
+    const handleEndSlide = () => {
+        setIsOpen(true);
+        console.log("end slide");
+    };
+    const handleClosePopup = () => {
+        setIsOpen(false);
+    };
 
     return (
         <div className="container">
             <img className="logo" src="./Images/LogoApp.png"></img>
             <div className="title">ส่วนที่ 1 ข้อที่ 1</div>
+            {isOpen && (
+                <div className="popup-container">
+                    <div className="popup-content">
+                        <p>เรียนส่วนที่ 1 จบแล้ว</p>
+                        <span id='first-span'>
+                            <img onClick={handleClosePopup} src='./Images/Section1/Home.png' id='close'></img>
+                            <p>Home</p>
+                        </span>
+                        <span id='second-span'>
+                            <img src='./Images/Section1/Next.png' id='next-section'></img>
+                            <p>Next section</p>
+                        </span>
+                    </div>
+                </div>
+            )}
             <div className="problem">
                 <p>{ImageStatus[currentImage].title}</p>
                 <img src={ImageStatus[currentImage].src}></img>
@@ -137,7 +156,8 @@ const Section1_1 = () => {
             </div>
             <footer>
                 <Link to="#" className="back-control">ย้อนกลับ</Link>
-                <Link to="/section1_2" className="next-control" onClick={handleNextPage}>ข้อต่อไป</Link>
+                {/* <Link to="/section1_2" className="next-control" onClick={handleNextPage}>ข้อต่อไป</Link> */}
+                <button className='next-control' onClick={handleEndSlide}>ข้อต่อไป</button>
             </footer>
         </div>
     )
