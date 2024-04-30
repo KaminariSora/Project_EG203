@@ -1,0 +1,23 @@
+.formular-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    /* border: 1px solid black; */
+}
+
+.mini-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    /* border: 1px solid red; */
+}
+
+.mini-box p {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid red;
+    padding: 10px;
+}
