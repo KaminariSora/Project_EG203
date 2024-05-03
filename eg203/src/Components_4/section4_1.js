@@ -18,6 +18,9 @@ const Section4_1 = () => {
         const A = parseInt(event.target.value)
         setA_value(A)
     }
+    const calculate = (event) => {
+        console.log("Click")
+    }
 
     const [w_value, setW_value] = useState(0)
     const [m_value, setM_value] = useState(0)
@@ -67,6 +70,11 @@ const Section4_1 = () => {
                     {/* <label>μ = </label> */}
                     <input type='number' placeholder="θ = " onChange={handleAngle} className='number'></input>
                 </div>
+            </div>
+        ),
+        start_button: (
+            <div className='start-container'>
+                <button id='cal-btn' onClick={calculate}>Click me</button>
             </div>
         )
     }]
@@ -137,6 +145,7 @@ const Section4_1 = () => {
             </div>
             <div className={'answer-box' + (currentSlide !== 3 ? ' hidden' : '')}>
                 {slides[currentSlide].answer_box}
+                {slides[currentSlide].start_button}
             </div>
             <footer>
                 <button className="back-control">ย้อนกลับ</button>
