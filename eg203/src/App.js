@@ -6,7 +6,7 @@ import Section4_1 from './Components_4/section4_1';
 function App() {
   return (
     <div>
-      <Section4_1 />
+      <Section1_1 />
     </div>
   );
 }

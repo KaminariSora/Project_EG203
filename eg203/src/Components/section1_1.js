@@ -158,7 +158,7 @@ const Section1_1 = () => {
             </div>
             <footer>
                 <Link to="#" className="back-control">ย้อนกลับ</Link>
-                <Link to="/section1_2" className="next-control">ข้อต่อไป</Link>
+                <button className='next-control' onClick={handleEndSlide}>ข้อต่อไป</button>
             </footer>
         </div>
     )
