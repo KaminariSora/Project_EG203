@@ -14,11 +14,11 @@ body {
     background-position: center;
 }
 .title {
-    margin: 20px;
+    margin: 15px;
     margin-left: 200px;
     margin-right: 200px;
     padding: 50px;
-    padding-bottom: 100px;
+    padding-bottom: 80px;
     border-radius: 20px;
     background-color: #ffde91;
     font-size: 58px;
@@ -28,11 +28,11 @@ body {
     font-size: 22px;
 }
 .btn {
-    background-color: transparent;
+    background-color: #A087BC;
     padding: 10px;
     text-align: center;
-
     cursor: pointer;
+    font-size: 2px;
   }
   
   .grid-container {
@@ -40,17 +40,36 @@ body {
     margin-left: 110px;
     margin-right: 110px;
     grid-template-columns: auto auto auto auto auto;
-    border:5px #ffde91;
     gap: 10px;
-    padding: 10px;
+    padding: 5px;
     background-color: transparent;
   }
   
   .grid-container > div {
     background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
-    padding: 20px 0;
+    padding: 5px 0;
     font-size: 30px;
     background-color: transparent;
     margin-top: 5px;
+  }
+
+  .grid-container2 {
+    
+    display: grid;
+    margin-left: 110px;
+    margin-right: 110px;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 10px;
+    padding: 5px;
+   
+  }
+  .grid-container2 > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    
+    text-align: center;
+    padding: 5px;
+    font-size: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
   }
