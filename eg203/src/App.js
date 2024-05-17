@@ -1,11 +1,11 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import Template from './Components/exercise_template';
+import Home from './Components/home_template';
 
 function App() {
   return (
     <div>
-      <Template/>
+      <Home />
     </div>
   );
 }

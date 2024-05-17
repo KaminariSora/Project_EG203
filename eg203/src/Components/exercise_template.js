@@ -3,7 +3,7 @@ import './exercise_template.css'
 const Template = () => {
     return (
         <div className="container">
-            <img className="logo" src="./Images/LogoApp.png"></img>
+            <img className="logo" src="./Images/LogoApp.png" alt="App Logo" />
             <div className="title">ส่วนที่ x ข้อที่ y</div>
             <div className="problem">Image Input</div>
             <div className="explanation">
