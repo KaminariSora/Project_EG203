@@ -118,7 +118,9 @@ const Section1_1 = () => {
                 <div className="input" id="p-value">
                     <p>ใส่ค่า P</p>
                     <label>{p_value}</label>
-                    <input type="range" min="0" max="100" onChange={handleP_value} className="range"></input>
+                    <div className='range-container'>
+                        <input type='range' min="0" max="100" onChange={handleP_value} className='range'></input>
+                    </div>
                 </div>
 
                 <div className="input" id="w-value">
@@ -133,7 +135,7 @@ const Section1_1 = () => {
             </div>
             <footer>
                 <Link to="#" className="back-control">ย้อนกลับ</Link>
-                <button className="next-control" onClick={handleEndSlide}>ข้อต่อไป</button>
+                <button className='next-control' onClick={handleEndSlide}>ข้อต่อไป</button>
             </footer>
         </div>
     );

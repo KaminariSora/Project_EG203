@@ -176,11 +176,15 @@ body {
     background: #333;
     outline: none;
     position: relative;
+    z-index: 10;
 }
 
 .range::before {
     content: '';
     height: 40px;
+    /* width: 50%; */
+    /* z-index: -1; */
+    background: #FFDE91;
     border-left: 1px solid black;
     position: absolute;
     transform: translateY(-50%);
@@ -189,6 +193,8 @@ body {
 .range::after {
     content: '';
     height: 40px;
+    /* width: 50%; */
+    background: #FFDE91;
     border-right: 1px solid black;
     position: absolute;
     right: 0;
@@ -211,6 +217,7 @@ label {
     left: 50%;
     top: 10%;
     transform: translate(-50%, 50%);
+    z-index: 10;
 }
 
 /* #p-value:after,
@@ -341,5 +348,10 @@ footer a {
 
     .popup-content span img {
         font-size: 1rem;
+    }
+
+    #section4_img {
+        width: auto;
+        height: 90%;
     }
 }
