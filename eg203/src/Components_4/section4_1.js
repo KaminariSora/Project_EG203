@@ -1,10 +1,21 @@
 import { useState } from 'react'
 import './section4.css'
+import ClosePopUp from '../PopUpComponent/Page-PopUp'
+import Solution from '../PopUpComponent/Solution-PopUp'
+import YellowPopUp from '../PopUpComponent/YellowPopUp'
 
 const Section4_1 = () => {
     const imageStyle = {
         height: '100%'
     }
+
+    const [w_value, setW_value] = useState(0)
+    const [m_value, setM_value] = useState(0)
+    const [a_value, setA_value] = useState(0)
+    const [currentSlide, setCurrentSlide] = useState(0)
+    const [isOpen, setIsOpen] = useState(false)
+    const [SolutionOpen, setSolutionOpen] = useState(false)
+    const [yellowOpen, setYellowOpen] = useState(false)
 
     const handleW_value = (event) => {
         const W = parseInt(event.target.value)
@@ -19,14 +30,10 @@ const Section4_1 = () => {
         setA_value(A)
     }
     const calculate = (event) => {
+        setSolutionOpen(true);
         console.log("Click")
     }
 
-    const [w_value, setW_value] = useState(0)
-    const [m_value, setM_value] = useState(0)
-    const [a_value, setA_value] = useState(0)
-    const [currentSlide, setCurrentSlide] = useState(0)
-    const [isOpen, setIsOpen] = useState(false)
     const slides = [{
         title: 'slide1',
         image: './Images/Section4/1.jpg',
@@ -90,29 +97,14 @@ const Section4_1 = () => {
         setIsOpen(true);
         console.log("end slide");
     };
-    const handleClosePopup = () => {
-        setIsOpen(false);
-    };
 
     return (
         <div className="container">
             <img className="logo" src="./Images/LogoApp.png"></img>
             <div className="title">ส่วนที่ 4 ข้อที่ 1</div>
-            {isOpen && (
-                <div className="popup-container">
-                    <div className="popup-content">
-                        <p>เรียนส่วนที่ 4 จบแล้ว</p>
-                        <span id='first-span'>
-                            <img onClick={handleClosePopup} src='./Images/Section1/Home.png' id='close'></img>
-                            <p>Home</p>
-                        </span>
-                        <span id='second-span'>
-                            <img src='./Images/Section1/Next.png' id='next-section'></img>
-                            <p>Next section</p>
-                        </span>
-                    </div>
-                </div>
-            )}
+            {isOpen && <ClosePopUp setIsOpen={setIsOpen} x={4}/>}
+            {SolutionOpen && <Solution setSolutionOpen={setSolutionOpen} setYellowOpen={setYellowOpen} textIndex={0}/>}
+            {yellowOpen && <YellowPopUp setYellowOpen={setYellowOpen}/>}
             <div className="problem">
                 <img src={slides[currentSlide].image} style={imageStyle} id='section4_img'></img>
             </div>
