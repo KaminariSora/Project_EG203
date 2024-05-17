@@ -1,4 +1,4 @@
-import Text from "./example_content"
+import RedScreenContent from "./RedScreenContent"
 import './popup-content.css'
 import { useState } from "react"
 
@@ -25,8 +25,8 @@ const Solution = ({setSolutionOpen, textIndex, setYellowOpen}) => {
         console.log("set")
     }
 
-    const content = Text[textIndex]?.content;
-    const header = Text[textIndex]?.header;
+    const content = RedScreenContent[textIndex]?.content;
+    const header = RedScreenContent[textIndex]?.header;
     return (
         <div className="popup-container" style={styleBox}>  
             <div className="popup-content" id="popup-content">
