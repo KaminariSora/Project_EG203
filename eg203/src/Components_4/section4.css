@@ -30,7 +30,12 @@
     width: 100%;
     min-height: 139px;
     height: 100%;
+    z-index: 200;
     /* background-color: #D9D9D9; */
+}
+
+.answer {
+    z-index: 100;
 }
 
 .start-container {

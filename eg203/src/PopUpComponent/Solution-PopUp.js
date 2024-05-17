@@ -19,10 +19,25 @@ const Solution = ({setSolutionOpen, textIndex, setYellowOpen}) => {
         fontSize: '2rem'
     }
 
+    const MoreDetial = {
+        position: 'absolute',
+        bottom: '20%',
+        margin: '10px',
+        border: 'none',
+        borderRadius: '5px',
+        fontSize: '2rem',
+        padding: '5px'
+    }
+
     const handleClosePopup = () => {
         setSolutionOpen(false)
         setYellowOpen(true)
         console.log("set")
+    }
+
+    const CloseRedPopUp = () => {
+        setSolutionOpen(false)
+        console.log("close red popup")
     }
 
     const content = RedScreenContent[textIndex]?.content;
@@ -32,7 +47,8 @@ const Solution = ({setSolutionOpen, textIndex, setYellowOpen}) => {
             <div className="popup-content" id="popup-content">
                 <div>{header}</div>
                 <div>{content}</div>
-                <button style={closePopUp} onClick={handleClosePopup}>X</button>
+                <button style={closePopUp} onClick={CloseRedPopUp}>X</button>
+                <button style={MoreDetial} onClick={handleClosePopup} >รายละเอียดเพิ่มเติม</button>
             </div>
         </div>
     )
