@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import './section1.css';
 import { useState, useEffect } from 'react';
-import ClosePopUp from '../PopUpComponent/popUp-container';
+import ClosePopUp from '../PopUpComponent/Page-PopUp';
 
 const Section1_1 = () => {
     const [p_value, setP_value] = useState(0);
@@ -85,7 +85,7 @@ const Section1_1 = () => {
         <div className="container">
             <img className="logo" src="./Images/LogoApp.png" alt="Logo"></img>
             <div className="title">ส่วนที่ 1 ข้อที่ 1</div>
-            {isOpen && <ClosePopUp setIsOpen={setIsOpen} />}
+            {isOpen && <ClosePopUp setIsOpen={setIsOpen} x={1} />}
             <div className="problem">
                 <p>{ImageStatus[currentImage].title}</p>
                 <img src={ImageStatus[currentImage].src} alt={ImageStatus[currentImage].title}></img>
