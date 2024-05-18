@@ -17,6 +17,7 @@ const Section4_1 = () => {
     const [isOpen, setIsOpen] = useState(false)
     const [SolutionOpen, setSolutionOpen] = useState(false)
     const [yellowOpen, setYellowOpen] = useState(false)
+    const [textIndex, setTextIndex] = useState(0)
 
     const handleW_value = (event) => {
         const W = parseInt(event.target.value)
@@ -31,8 +32,10 @@ const Section4_1 = () => {
         setA_value(A)
     }
     const calculate = (event) => {
+        let result = w_value + a_value + m_value
         setSolutionOpen(true);
-        console.log("Click")
+        setTextIndex(3)
+        console.log(result)
     }
 
     const slides = [{
@@ -104,7 +107,7 @@ const Section4_1 = () => {
             <img className="logo" src="./Images/LogoApp.png"></img>
             <div className="title">ส่วนที่ 4 ข้อที่ 1</div>
             {isOpen && <ClosePopUp setIsOpen={setIsOpen} x={4}/>}
-            {SolutionOpen && <Solution setSolutionOpen={setSolutionOpen} setYellowOpen={setYellowOpen} textIndex={0}/>}
+            {SolutionOpen && <Solution setSolutionOpen={setSolutionOpen} setYellowOpen={setYellowOpen} textIndex={textIndex}/>}
             {yellowOpen && <YellowPopUp setYellowOpen={setYellowOpen} DataList={YellowScreenContent}/>}
             <div className="problem">
                 <img src={slides[currentSlide].image} style={imageStyle} id='section4_img'></img>
