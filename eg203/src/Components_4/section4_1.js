@@ -34,7 +34,7 @@ const Section4_1 = () => {
     const calculate = (event) => {
         let result = w_value + a_value + m_value
         setSolutionOpen(true);
-        setTextIndex(3)
+        setTextIndex(1)
         console.log(result)
     }
 
@@ -69,7 +69,6 @@ const Section4_1 = () => {
                         <input type='range' min="0" max="10" onChange={handleM_value} className='range'></input>
                     </div>
                 </div>
-    
                 <div className="input" id="w-value">
                     <p>ใส่ค่า μ</p>
                     {/* <label>W = </label> */}
@@ -107,7 +106,7 @@ const Section4_1 = () => {
             <img className="logo" src="./Images/LogoApp.png"></img>
             <div className="title">ส่วนที่ 4 ข้อที่ 1</div>
             {isOpen && <ClosePopUp setIsOpen={setIsOpen} x={4}/>}
-            {SolutionOpen && <Solution setSolutionOpen={setSolutionOpen} setYellowOpen={setYellowOpen} textIndex={0}/>}
+            {SolutionOpen && <Solution setSolutionOpen={setSolutionOpen} setYellowOpen={setYellowOpen} Section = "Section4" textIndex={0}/>}
             {yellowOpen && <YellowPopUp setYellowOpen={setYellowOpen} DataList={YellowScreenContent}/>}
             <div className="problem">
                 <img src={slides[currentSlide].image} style={imageStyle} id='section4_img'></img>
@@ -139,7 +138,7 @@ const Section4_1 = () => {
                     </button>
                 </div>
             </div>
-            <div className={'answer-box' + (currentSlide !== 3 ? ' hidden' : '')}>
+            <div className={'answer-box' + (currentSlide !== 2 ? ' hidden' : '')}>
                 {slides[currentSlide].answer_box}
                 {slides[currentSlide].start_button}
             </div>

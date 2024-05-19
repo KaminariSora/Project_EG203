@@ -1,10 +1,11 @@
 import './App.css';
 import Section2 from './Components_2/section2';
+import Section4_1 from './Components_4/section4_1';
 
 function App() {
   return (
     <div>
-      <Section2 />
+      <Section4_1 />
     </div>
   );
 }

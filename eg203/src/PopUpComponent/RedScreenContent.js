@@ -28,7 +28,8 @@ const RedScreenContent = {
     },
     {
         //index3
-        header: 'ยังใส่ข้อมูลไม่ครบทุกช่อง'
+        header: 'ยังใส่ข้อมูลไม่ครบทุกช่อง',
+        content: ''
     },],
 }
 // console.log(RedScreenContent.Section4[0].header)
