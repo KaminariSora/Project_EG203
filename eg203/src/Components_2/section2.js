@@ -5,7 +5,7 @@ import Solution from '../PopUpComponent/Solution-PopUp'
 import YellowPopUp from '../PopUpComponent/YellowPopUp'
 import { Section2_1 } from '../PopUpComponent/YellowScreenContent';
 
-const Section2 = () => {
+const PageSection2_1 = () => {
     const imageStyle = {
         height: '100%'
     }
@@ -103,4 +103,4 @@ const Section2 = () => {
     )
 }
 
-export default Section2;
+export default PageSection2_1;

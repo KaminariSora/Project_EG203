@@ -5,7 +5,7 @@ import Solution from '../PopUpComponent/Solution-PopUp'
 import YellowPopUp from '../PopUpComponent/YellowPopUp'
 import { Section2_2 } from '../PopUpComponent/YellowScreenContent';
 
-const Section2 = () => {
+const PageSection2_2 = () => {
     const imageStyle = {
         height: '100%'
     }
@@ -36,13 +36,14 @@ const Section2 = () => {
 
     useEffect(() => {
         console.log(theta_value)
-
-        if(theta_value < 65.2){
+        var currentTheta = 90;
+        if(theta_value != currentTheta){
             setSolutionOpen(true);
             console.log("เสาล้ม")
         }
         else{
             setSolutionOpen(false);
+            setTheta(90);
         }
 
     }, [theta_value]);
@@ -50,10 +51,7 @@ const Section2 = () => {
     useEffect(() => {
         console.log(theta_value)
 
-        if(!SolutionOpen && theta_value > 65.2){
-            setTheta(theta_value);
-        }
-        else if(!SolutionOpen){
+        if(!SolutionOpen){
             setTheta(90);
         }
 
@@ -103,4 +101,4 @@ const Section2 = () => {
     )
 }
 
-export default Section2;
+export default PageSection2_2;
