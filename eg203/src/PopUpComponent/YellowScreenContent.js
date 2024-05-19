@@ -2,7 +2,7 @@ const YellowScreenContent = [
     {
         header: 'จากFree body diagram ได้เป็น',
         src: "./Images/Section4/2.jpg",
-        formular: ['θ = tan<sup>-1</sup>M<sub>s</sub>&frac12;&pi;r'],
+        formular: ['\\theta = \\tan^{-1}\\left(M_s \\frac{1}{2} \\pi r \\right)'],
     },
     {
         header: '2',
