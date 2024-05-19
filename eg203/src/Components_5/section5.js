@@ -12,7 +12,7 @@ const Section5 = () => {
         height: '100%'
     }
 
-    const [theta_value, setTheta] = useState(90)
+    const [mass_value, setmass] = useState(2.0)
     const [isOpen, setIsOpen] = useState(false)
     const [SolutionOpen, setSolutionOpen] = useState(false)
     const [yellowOpen, setYellowOpen] = useState(false)
@@ -42,15 +42,15 @@ const Section5 = () => {
         console.log("end slide");
     };
 
-    const handleTheta_value = (event) => {
-        const Theta = parseInt(event.target.value);
-        setTheta(Theta);
+    const handlemass_value = (event) => {
+        const mass = parseFloat(event.target.value);
+        setmass(mass);
     };
 
     useEffect(() => {
-        console.log(theta_value)
+        console.log(mass_value)
 
-        if(theta_value < 65.2){
+        if(mass_value > 2.22){
             setSolutionOpen(true);
             console.log("เสาล้ม")
         }
@@ -58,16 +58,16 @@ const Section5 = () => {
             setSolutionOpen(false);
         }
 
-    }, [theta_value]);
+    }, [mass_value]);
 
     useEffect(() => {
-        console.log(theta_value)
+        console.log(mass_value)
 
-        if(!SolutionOpen && theta_value > 65.2){
-            setTheta(theta_value);
+        if(!SolutionOpen && mass_value < 2.22){
+            setmass(mass_value);
         }
         else if(!SolutionOpen){
-            setTheta(90);
+            setmass(2);
         }
     }, [SolutionOpen]);
 
@@ -119,10 +119,10 @@ const Section5 = () => {
             </div>
             <div className={'answer' + (currentSlide !== 1 ? ' hidden' : '')}>
                 <div className="input" id="p-value">
-                    <p>input θ</p>
-                    <label>{theta_value}° </label>
+                    <p>Input mass(kg)</p>
+                    <label>{mass_value} kg</label>
                     <div className='range-container'>
-                        <input type='range' min="0" max="180" onChange={handleTheta_value} className='range' value={theta_value}></input>
+                        <input type='range' min="0" max="4" onChange={handlemass_value} className='range' step="0.1" value={mass_value}></input>
                     </div>
                 </div>
                 <div className='start-container'>
