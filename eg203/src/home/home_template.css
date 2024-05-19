@@ -27,8 +27,7 @@ body {
     margin-left: 150px;
     font-size: 22px;
 }
-.btn {
-    background-color: #A087BC;
+.btn-home  {
     padding: 10px;
     text-align: center;
     cursor: pointer;
