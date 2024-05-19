@@ -1,8 +1,8 @@
-import Text from "./example_content"
+import RedScreenContent from "./RedScreenContent"
 import './popup-content.css'
 import { useState } from "react"
 
-const Solution = ({setSolutionOpen, textIndex, setYellowOpen}) => {
+const Solution = ({setSolutionOpen, Section,textIndex, setYellowOpen}) => {
     const styleBox =  {
         backgroundColor:"rgba(255, 9 ,9, .66)",
     }
@@ -19,20 +19,37 @@ const Solution = ({setSolutionOpen, textIndex, setYellowOpen}) => {
         fontSize: '2rem'
     }
 
+    const MoreDetial = {
+        position: 'absolute',
+        bottom: '20%',
+        margin: '10px',
+        border: 'none',
+        borderRadius: '5px',
+        fontSize: '2rem',
+        padding: '5px'
+    }
+
     const handleClosePopup = () => {
         setSolutionOpen(false)
         setYellowOpen(true)
         console.log("set")
     }
 
-    const content = Text[textIndex]?.content;
-    const header = Text[textIndex]?.header;
+    const CloseRedPopUp = () => {
+        setSolutionOpen(false)
+        console.log("close red popup")
+    }
+
+    const content = RedScreenContent[Section][textIndex].content ;
+    const header = RedScreenContent[Section][textIndex].header;
+    console.log(RedScreenContent)
     return (
         <div className="popup-container" style={styleBox}>  
             <div className="popup-content" id="popup-content">
                 <div>{header}</div>
                 <div>{content}</div>
-                <button style={closePopUp} onClick={handleClosePopup}>X</button>
+                <button style={closePopUp} onClick={CloseRedPopUp}>X</button>
+                <button style={MoreDetial} onClick={handleClosePopup} >รายละเอียดเพิ่มเติม</button>
             </div>
         </div>
     )

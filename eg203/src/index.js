@@ -11,6 +11,10 @@ import {
   Route,
   Link,
 } from "react-router-dom";
+import Section4_1 from './Components_4/section4_1';
+import PageSection2_2 from './Components_2/section2_2';
+import PageSection2_1 from './Components_2/section2';
+
 
 
 const router = createBrowserRouter([
@@ -21,6 +25,18 @@ const router = createBrowserRouter([
   {
     path: "Section1_1",
     element: <Section1_1/>
+  },
+  {
+    path: "Section2_1",
+    element: <PageSection2_1/>
+  },
+  {
+    path: "Section2_2",
+    element: <PageSection2_2/>
+  },
+  {
+    path: "Section4_1",
+    element: <Section4_1/>
   },
   {
     path: "Slider-test",
