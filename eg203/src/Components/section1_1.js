@@ -10,33 +10,41 @@ const Section1_1 = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [currentImage, setCurrentImage] = useState(0);
     const [isOpen, setIsOpen] = useState(false);
-
-    const ImageStatus = [
-        { title: 'รูปแบบวัตถุอยุ่ในสมดุล', src: './Images/Section1/Static.png' },
-        { title: 'กำลังมีการเคลื่อนที่', src: './Images/Section1/Moving.png' },
-        { title: 'มีการเคลื่อนที่', src: './Images/Section1/Static_Moving.png' }
-    ];
-
-    const slides = [
-        {
-            title: 'Slide 1',
-            content: 'ข้อนี้เป็น Lab ที่ให้ Input ค่า P,W,μ(บอกว่าμแทนค่าอะไร),เมื่อสังเกตการเคลื่อนที่แล้วอธิบาย ในสภาะวะสมดุลวัตถุจะอยู่กับที่โดยถ้า x=a/2 หรือ N กระทำที่ มุมขวา วัตถุจะอยู่ในสภาวะกำลังล้มไปข้างหน้า และ x หาได้จาก',
-            formular: ['W = Ph', 'X = Ph/W', 'P = F'],
-            note: 'ในการคิดถ้าวัตถุอยู่ในสมดุล และมีแรงเสียดทานระบบต้องสอดคล้องกับ สมการสมดุล และแรงเสียดทานด้วย'
-        },
-        {
-            title: 'Slide 2',
-            content: 'ถ้าเพิ่ม P ขึ้นเรื่อยๆ จนค่า F มากสุด(F ) วัตถุจะกำลังเคลื่อนที่ โดย F  = μN(ถ้าเพิ่ม P ถึง F  จะเกิด R  ) และเมื่ออยู่ใน สภาวะ กำลังเคลื่อนที่ แรง N และ F  จะทำให้เกิด R  โดยหามุมของ R  ได้จาก',
-            formular: ['θ<sub>s</sub> = tan<sup>-1</sup>M<sub>s</sub>'],
-            note: ''
-        },
-        {
-            title: 'Slide 3',
-            content: 'เมื่อวัตถุเริ่มเคลื่ยนที่ F  จะกลายเป็น F  โดยหาได้จาก F  = μN และแรงลัพธ์ R  มีมุม',
-            formular: ['θ<sub>s</sub> = tan<sup>-1</sup>M<sub>s</sub>'],
-            note: ''
-        }
-    ];
+    const ImageStatus = [{
+        title: 'รูปแบบวัตถุอยุ่ในสมดุล',
+        src: './Images/Section1/Section1_1.png'
+    },
+    {
+        title: 'กำลังมีการเคลื่อนที่',
+        src: './Images/Section1/Section1_2.png'
+    },
+    {
+        title: 'มีการเคลื่อนที่',
+        src: './Images/Section1/Section1_3.png'
+    }]
+    const slides = [{
+        title: 'Slide 1',
+        content:
+            'ข้อนี้เป็น Lab ที่ให้ Input ค่า P,W,μ(บอกว่าμแทนค่าอะไร),เมื่อสังเกตการเคลื่อนที่แล้วอธิบาย ในสภาะวะสมดุลวัตถุจะอยู่กับที่โดยถ้า x=a/2 หรือ N กระทำที่ มุมขวา วัตถุจะอยู่ในสภาวะกำลังล้มไปข้างหน้า และ x หาได้จาก',
+        formular: ['W = Ph', 'X = Ph/W', 'P = F'],
+        note:
+            'ในการคิดถ้าวัตถุอยู่ในสมดุล และมีแรงเสียดทานระบบต้องสอดคล้องกับ สมการสมดุล และแรงเสียดทานด้วย'
+    },
+    {
+        title: 'Slide 2',
+        content:
+            'ถ้าเพิ่ม P ขึ้นเรื่อยๆ จนค่า F มากสุด(F ) วัตถุจะกำลังเคลื่อนที่ โดย F  = μN(ถ้าเพิ่ม P ถึง F  จะเกิด R  ) และเมื่ออยู่ใน สภาวะ กำลังเคลื่อนที่ แรง N และ F  จะทำให้เกิด R  โดยหามุมของ R  ได้จาก',
+        formular: ['θ<sub>s</sub> = tan<sup>-1</sup>M<sub>s</sub>'],
+        note:
+            ''
+    },
+    {
+        title: 'Slide 3',
+        content:
+            'เมื่อวัตถุเริ่มเคลื่ยนที่ F  จะกลายเป็น F  โดยหาได้จาก F  = μN และแรงลัพธ์ R  มีมุม',
+        formular: ['θ<sub>s</sub> = tan<sup>-1</sup>M<sub>s</sub>'],
+        note: ''
+    }]
 
     useEffect(() => {
         const WM = m_value * w_value;
