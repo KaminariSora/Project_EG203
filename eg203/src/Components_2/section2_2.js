@@ -3,7 +3,7 @@ import './section2.css'
 import ClosePopUp from '../PopUpComponent/Page-PopUp'
 import Solution from '../PopUpComponent/Solution-PopUp'
 import YellowPopUp from '../PopUpComponent/YellowPopUp'
-import { Section2_1 } from '../PopUpComponent/YellowScreenContent';
+import { Section2_2 } from '../PopUpComponent/YellowScreenContent';
 
 const Section2 = () => {
     const imageStyle = {
@@ -17,8 +17,8 @@ const Section2 = () => {
 
     const slides = [{
         title: 'slide1',
-        image: './Images/Section2/frist.png',
-        content: 'ให้เสามีน้ำหนัก w ที่ถูกหย่อนช้าๆ จากแนวดิ่งθ= 90  โดยให้ cable AB ถ้า μ ที่จุด C มีค่า 0.3',
+        image: './Images/Section2/Section2_1.png',
+        content: 'กำหนดให้คานถูกรองรับโดย pin ที่จุด A และ roller ที่มีรัศมี 15 mm ถ้า μ = 0.3 ที่จุด B และ C จงหามุมθ สูงสุดที่ไม้จะเกิดการเลื่อน (กำหนดให้ roller น้ำหนักน้อยมาก)' ,
         formular: [],
         formular_list: [],
         answer_box: (<div></div>)
@@ -62,10 +62,10 @@ const Section2 = () => {
     return (
         <div className="container">
             <img className="logo" src="./Images/LogoApp.png"></img>
-            <div className="title">ส่วนที่ 2 ข้อที่ 1</div>
+            <div className="title">ส่วนที่ 2 ข้อที่ 2</div>
             {isOpen && <ClosePopUp setIsOpen={setIsOpen} x={4}/>}
             {SolutionOpen && <Solution setSolutionOpen={setSolutionOpen} setYellowOpen={setYellowOpen} textIndex={0} Section={"Section2"}/>}
-            {yellowOpen && <YellowPopUp setYellowOpen={setYellowOpen} DataList={Section2_1}/>}
+            {yellowOpen && <YellowPopUp setYellowOpen={setYellowOpen} DataList={Section2_2}/>}
             <div className="problem">
                 <img src={slides[0].image} style={imageStyle} id='section2_img'></img>
             </div>

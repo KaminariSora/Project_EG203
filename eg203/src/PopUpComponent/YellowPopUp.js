@@ -39,7 +39,7 @@ const YellowPopUp = ({ setYellowOpen, DataList }) => {
                         <div id='content'>
                             <p  dangerouslySetInnerHTML={{ __html: katex.renderToString(DataList[currentSlide].header) }} className="katex"></p>
                         </div>
-                        <img src={DataList[currentSlide].src} alt="Popup Image" className='yellow-img' />
+                        {DataList[currentSlide].src && <img src={DataList[currentSlide].src} alt="Popup Image" className='yellow-img' />}
                         <div id='content'>
                             {DataList[currentSlide].formular.map((item, index) => ( //แก้ข้อความตรงนี้
                                 <p key={index} dangerouslySetInnerHTML={{ __html: katex.renderToString(item) }} className="katex"></p>
