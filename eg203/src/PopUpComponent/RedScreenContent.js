@@ -34,7 +34,7 @@ const RedScreenContent = {
     },],
     Section5: [{
         //index0
-        header: "เสาล้มแล้ว",
+        header: "ไม่มีการเลื่อน",
         content: ""
     }],
 }
