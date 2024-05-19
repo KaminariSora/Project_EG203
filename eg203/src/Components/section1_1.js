@@ -11,15 +11,15 @@ const Section1_1 = () => {
     const [isOpen, setIsOpen] = useState(false);
     const ImageStatus = [{
         title: 'รูปแบบวัตถุอยุ่ในสมดุล',
-        src: './Images/Section1/Static.png'
+        src: './Images/Section1/Section1_1.png'
     },
     {
         title: 'กำลังมีการเคลื่อนที่',
-        src: './Images/Section1/Moving.png'
+        src: './Images/Section1/Section1_2.png'
     },
     {
         title: 'มีการเคลื่อนที่',
-        src: './Images/Section1/Static_Moving.png'
+        src: './Images/Section1/Section1_3.png'
     }]
     const slides = [{
         title: 'Slide 1',
