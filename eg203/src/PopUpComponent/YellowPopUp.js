@@ -37,7 +37,7 @@ const YellowPopUp = ({ setYellowOpen, DataList }) => {
                 {DataList && DataList.length > 0 ? (
                     <>
                         <div id='content'>
-                            {DataList[currentSlide].header}
+                            <p  dangerouslySetInnerHTML={{ __html: katex.renderToString(DataList[currentSlide].header) }} className="katex"></p>
                         </div>
                         <img src={DataList[currentSlide].src} alt="Popup Image" className='yellow-img' />
                         <div id='content'>

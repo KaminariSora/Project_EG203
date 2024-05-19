@@ -18,7 +18,7 @@ const Section2 = () => {
     const slides = [{
         title: 'slide1',
         image: './Images/Section2/frist.jpg',
-        content: 'ให้เสามีน้ำหนัก w ที่ถูกหย่อนช้าๆ จากแนวดิ่งθ= 90  โดยให้ cable AB ถ้า M  ที่จุด C มีค่า 0.3',
+        content: 'ให้เสามีน้ำหนัก w ที่ถูกหย่อนช้าๆ จากแนวดิ่งθ= 90  โดยให้ cable AB ถ้า μ ที่จุด C มีค่า 0.3',
         formular: [],
         formular_list: [],
         answer_box: (<div></div>)
