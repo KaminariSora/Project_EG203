@@ -179,6 +179,7 @@ body {
     z-index: 10;
 }
 
+
 .range::before {
     content: '';
     height: 40px;

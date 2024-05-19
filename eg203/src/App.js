@@ -1,12 +1,10 @@
 import './App.css';
-import Template from './PopUpComponent/exercise_template';
-import Section1_1 from './Components/section1_1';
-import Section4_1 from './Components_4/section4_1';
+import Section2 from './Components_2/section2';
 
 function App() {
   return (
     <div>
-      <Section4_1 />
+      <Section2 />
     </div>
   );
 }

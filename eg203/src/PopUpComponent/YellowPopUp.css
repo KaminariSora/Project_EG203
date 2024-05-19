@@ -15,3 +15,16 @@
     color: green;
     font-size: 2rem;
 }
+
+.yellow-img {
+    height: 50%;
+}
+
+.katex {
+    font-family: "Prompt", sans-serif !important;
+    font-size: 2rem !important;
+}
+.katex .mathnormal {
+    font-family: "Prompt", sans-serif !important;
+    font-size: 2rem !important;
+}

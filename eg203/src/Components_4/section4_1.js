@@ -107,7 +107,7 @@ const Section4_1 = () => {
             <img className="logo" src="./Images/LogoApp.png"></img>
             <div className="title">ส่วนที่ 4 ข้อที่ 1</div>
             {isOpen && <ClosePopUp setIsOpen={setIsOpen} x={4}/>}
-            {SolutionOpen && <Solution setSolutionOpen={setSolutionOpen} setYellowOpen={setYellowOpen} textIndex={textIndex}/>}
+            {SolutionOpen && <Solution setSolutionOpen={setSolutionOpen} setYellowOpen={setYellowOpen} textIndex={0}/>}
             {yellowOpen && <YellowPopUp setYellowOpen={setYellowOpen} DataList={YellowScreenContent}/>}
             <div className="problem">
                 <img src={slides[currentSlide].image} style={imageStyle} id='section4_img'></img>

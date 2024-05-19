@@ -2,7 +2,7 @@ import RedScreenContent from "./RedScreenContent"
 import './popup-content.css'
 import { useState } from "react"
 
-const Solution = ({setSolutionOpen, textIndex, setYellowOpen}) => {
+const Solution = ({setSolutionOpen, Section,textIndex, setYellowOpen}) => {
     const styleBox =  {
         backgroundColor:"rgba(255, 9 ,9, .66)",
     }
@@ -40,8 +40,9 @@ const Solution = ({setSolutionOpen, textIndex, setYellowOpen}) => {
         console.log("close red popup")
     }
 
-    const content = RedScreenContent[textIndex]?.content;
-    const header = RedScreenContent[textIndex]?.header;
+    const content = RedScreenContent[Section][textIndex].content ;
+    const header = RedScreenContent[Section][textIndex].header;
+    console.log(RedScreenContent)
     return (
         <div className="popup-container" style={styleBox}>  
             <div className="popup-content" id="popup-content">
