@@ -1,19 +1,15 @@
 import './exercise_template.css'
 
-const Sect32 = () => {
+const Template = () => {
     return (
         <div className="container">
             <img className="logo" src="./Images/LogoApp.png"></img>
-            <div className="title">ส่วนที่ 3 ข้อที่ 2</div>
-            <div className="problem">
-                <img src={require('./img/2/Section3-2.1.png')} />
-                <img src={require('./img/2/Section3-2.2.png')} />
-                <img src={require('./img/2/Section3-2.3.png')} />
-            </div>
+            <div className="title">ส่วนที่ x ข้อที่ y</div>
+            <div className="problem">Image Input</div>
             <div className="explanation">
                 Explain
                 <div className="btn" id="back-btn">Back</div>
-                <div className="btn" id="next-btn">Next</div>
+                <div className="btn" id="next-btn">next</div>
             </div>
             <div className="answer">Answer</div>
             <footer>
@@ -24,4 +20,4 @@ const Sect32 = () => {
     )
 }
 
-export default Sect32
+export default Template
