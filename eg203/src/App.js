@@ -1,11 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import Template from './Components/exercise_template';
+import Sect31 from './Components/exercise_1';
+import Sect32 from './Components/exercise_2';
 
 function App() {
   return (
     <div>
-      <Template/>
+      <Sect31/>
     </div>
   );
 }
