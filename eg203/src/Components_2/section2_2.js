@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 import './section2.css'
 import ClosePopUp from '../PopUpComponent/Page-PopUp'
 import Solution from '../PopUpComponent/Solution-PopUp'
@@ -61,7 +62,7 @@ const PageSection2_2 = () => {
         <div className="container">
             <img className="logo" src="./Images/LogoApp.png"></img>
             <div className="title">ส่วนที่ 2 ข้อที่ 2</div>
-            {isOpen && <ClosePopUp setIsOpen={setIsOpen} x={4}/>}
+            {isOpen && <ClosePopUp setIsOpen={setIsOpen} x={2}/>}
             {SolutionOpen && <Solution setSolutionOpen={setSolutionOpen} setYellowOpen={setYellowOpen} textIndex={0} Section={"Section2"}/>}
             {yellowOpen && <YellowPopUp setYellowOpen={setYellowOpen} DataList={Section2_2}/>}
             <div className="problem">
@@ -94,7 +95,7 @@ const PageSection2_2 = () => {
             </div>
             </div>
             <footer>
-                <button className="back-control">ย้อนกลับ</button>
+                <Link to="/Section2_1" className="back-control">ย้อนกลับ</Link>
                 <button className='next-control' onClick={handleEndSlide}>ข้อต่อไป</button>
             </footer>
         </div>

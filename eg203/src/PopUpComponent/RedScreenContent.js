@@ -13,23 +13,29 @@ const RedScreenContent = {
     Section3: [{
 
     }],
-    Section4: [{
+    Section4: [
+    {
         //index0
-        header: "เกลียว เคลื่ยนที่ลง",
+        header: 'เกลียวเคลื่อนที่ขึ้น',
+        content: '(ถ้า moment มีค่าสูงพอ)'
+    },    
+    {
+        //index1
+        header: "เกลียวเคลื่ยนที่ลง",
         content: "(กรณีที่พื้นผิวเกลียวลื่นมาก)"
     },
     {
-        // index1
+        // index2
         header: 'เกลียวเคลื่อนที่ลง',
         content: '(เมื่อเกลียวหยาบมากๆแล้วต้องใช้momentทิศตรงข้ามกับข้ออื่น)'
     },
     {
-        // index2
+        // index3
         header: "เกลียว ล็อคตัวเองได้",
         content: "(ถ้าเอา moment แล้วเกลียวไม่มีการเคลื่ยนที่)"
     },
     {
-        //index3
+        //index4
         header: 'ยังใส่ข้อมูลไม่ครบทุกช่อง'
     },],
     Section5: [{

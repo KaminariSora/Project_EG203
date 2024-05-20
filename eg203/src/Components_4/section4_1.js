@@ -3,20 +3,23 @@ import './section4.css'
 import ClosePopUp from '../PopUpComponent/Page-PopUp'
 import Solution from '../PopUpComponent/Solution-PopUp'
 import YellowPopUp from '../PopUpComponent/YellowPopUp'
-import { YellowScreenContent } from '../PopUpComponent/YellowScreenContent';
+import katex from 'katex';
+import { Section4_first, Section4_second, Section4_thrid, Section4_forth, YellowScreenContent } from '../PopUpComponent/YellowScreenContent';
 
-const Section4_1 = () => {
+const PageSection4_1 = () => {
     const imageStyle = {
         height: '100%'
     }
 
-    const [w_value, setW_value] = useState(0)
-    const [m_value, setM_value] = useState(0)
-    const [a_value, setA_value] = useState(0)
+    const [w_value, setW_value] = useState(0) //Mu
+    const [m_value, setM_value] = useState(0) //Moment
+    const [a_value, setA_value] = useState(0) //Theta
     const [currentSlide, setCurrentSlide] = useState(0)
     const [isOpen, setIsOpen] = useState(false)
     const [SolutionOpen, setSolutionOpen] = useState(false)
     const [yellowOpen, setYellowOpen] = useState(false)
+    const [RedSectionNav, setRedSectionNav] = useState(0)
+    const [DataSectionNav, setDataSectionNav] = useState("")
 
     const handleW_value = (event) => {
         const W = parseInt(event.target.value)
@@ -31,6 +34,38 @@ const Section4_1 = () => {
         setA_value(A)
     }
     const calculate = (event) => {
+        const moment = m_value;
+        const μs = w_value;
+        const theta = a_value;
+        let alpha;
+        alpha = Math.atan(μs); 
+        const d = 1;
+        const axialFriction = moment / (d * μs);
+        if (theta <= alpha) {
+            console.log("สกรูอยู่ในสถานะ Self-locking");
+            console.log(DataSectionNav)
+            setRedSectionNav(3)
+            setDataSectionNav('Section4_forth')
+            //case3
+        } else if (theta > alpha && theta < 90) {
+            console.log("สกรูอยู่ในสถานะ Upward Screw");
+            setRedSectionNav(0)
+            setDataSectionNav('Section4_first')
+            //case_1
+        } else if (theta > alpha && theta > 90) {
+            console.log("สกรูอยู่ในสถานะ Downward Screw");
+            setRedSectionNav(1)
+            setDataSectionNav('Section4_second')
+            //case_2
+        } else if (theta < alpha) {
+            console.log("สกรูอยู่ในสถานะ Downward Screw"); 
+            setRedSectionNav(3)
+            setDataSectionNav('Section4_forth')
+            //case_4
+        } else {
+            console.log("สกรูอยู่ในสถานะ Impending motion");
+            setRedSectionNav(4)
+        }
         setSolutionOpen(true);
         console.log("Click")
     }
@@ -104,8 +139,10 @@ const Section4_1 = () => {
             <img className="logo" src="./Images/LogoApp.png"></img>
             <div className="title">ส่วนที่ 4 ข้อที่ 1</div>
             {isOpen && <ClosePopUp setIsOpen={setIsOpen} x={4}/>}
-            {SolutionOpen && <Solution setSolutionOpen={setSolutionOpen} setYellowOpen={setYellowOpen} textIndex={0} Section={"Section4"} />}
-            {yellowOpen && <YellowPopUp setYellowOpen={setYellowOpen} DataList={YellowScreenContent}/>}
+            {/* //เงื่อนไข array หน้าสีแดง */}
+            {SolutionOpen && <Solution setSolutionOpen={setSolutionOpen} setYellowOpen={setYellowOpen} textIndex={RedSectionNav} Section={"Section4"} />} 
+            {/* //เงื่อนไขหน้าสีเหลือง */}
+            {yellowOpen && <YellowPopUp setYellowOpen={setYellowOpen} DataList={DataSectionNav}/>}
             <div className="problem">
                 <img src={slides[currentSlide].image} style={imageStyle} id='section4_img'></img>
             </div>
@@ -136,7 +173,7 @@ const Section4_1 = () => {
                     </button>
                 </div>
             </div>
-            <div className={'answer-box' + (currentSlide !== 3 ? ' hidden' : '')}>
+            <div className={'answer-box' + (currentSlide !== 3 ? 'hidden' : '')}>
                 {slides[currentSlide].answer_box}
                 {slides[currentSlide].start_button}
             </div>
@@ -148,4 +185,4 @@ const Section4_1 = () => {
     )
 }
 
-export default Section4_1
+export default PageSection4_1
