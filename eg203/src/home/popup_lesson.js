@@ -14,7 +14,8 @@ const Solution = ({setSolutionOpen,lessonList}) => {
         borderRadius: '50%',
         width: '50px',
         height: '50px',
-        fontSize: '2rem'
+        fontSize: '2rem',
+        cursor: 'pointer'
     }
 
     const handleClosePopup = () => {

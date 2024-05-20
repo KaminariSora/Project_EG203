@@ -16,6 +16,12 @@ body {
     background-position: center;
 }
 
+btn:hover,
+.back-control:hover,
+.next-control:hover {
+    cursor: pointer;
+}
+
 .logo {
     position: absolute;
     left: 0;

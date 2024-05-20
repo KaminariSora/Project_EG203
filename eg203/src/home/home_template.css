@@ -34,6 +34,10 @@ body {
     cursor: pointer;
     font-size: 2px;
   }
+
+  .btn-home:hover {
+    transform: scale(1.1);
+  }
   
   .grid-container-home {
     display: grid;

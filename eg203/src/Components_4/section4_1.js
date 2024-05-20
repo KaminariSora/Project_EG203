@@ -1,10 +1,10 @@
+import { Link } from 'react-router-dom';
 import { useState } from 'react'
 import './section4.css'
 import ClosePopUp from '../PopUpComponent/Page-PopUp'
 import Solution from '../PopUpComponent/Solution-PopUp'
 import YellowPopUp from '../PopUpComponent/YellowPopUp'
-import katex from 'katex';
-import { Section4_first, Section4_second, Section4_thrid, Section4_forth, YellowScreenContent } from '../PopUpComponent/YellowScreenContent';
+import { Section4_first, Section4_second, Section4_third, Section4_forth, YellowScreenContent } from '../PopUpComponent/YellowScreenContent';
 
 const PageSection4_1 = () => {
     const imageStyle = {
@@ -60,7 +60,7 @@ const PageSection4_1 = () => {
         } else if (theta < alpha) {
             console.log("สกรูอยู่ในสถานะ Downward Screw"); 
             setRedSectionNav(3)
-            setDataSectionNav(Section4_forth)
+            setDataSectionNav(Section4_third)
             //case_4
         } else {
             console.log("สกรูอยู่ในสถานะ Impending motion");
@@ -72,7 +72,7 @@ const PageSection4_1 = () => {
 
     const slides = [{
         title: 'slide1',
-        image: './Images/Section4/1.jpg',
+        image: './Images/Section4/Section4_main1.png',
         content: 'เกลียว คือระนาบที่มีความลาดเอียงหรือลิ่มที่ พันรอบแท่งกระบอก โดยถ้า r คือรัศมีเฉรี่ยของเกลียวI คือระยะแนวแกนของแท่งกระบอก เราจะหามุมของเกลียว ได้จาก',
         formular: ['θ = tan<sup>-1</sup>M<sub>s</sub>&frac12;&pi;r'],
         formular_list: [],
@@ -80,7 +80,7 @@ const PageSection4_1 = () => {
     },
     {
         title: 'slide2',
-        image: './Images/Section4/2.jpg',
+        image: './Images/Section4/Section4_main2.png',
         content: 'เมื่อเราคลายสลักเกลียว และจะมีรูปร่างเป็นBlock ที่วางบนระนาบเอียง โดยBlock จะถูกกระทำโดยแรง\n1.แรง W ; เป็นแรงในแนวดิ่ง\n2.แรง S ;  ที่เกิดจาก Moment โดยที่ M = Sr\n3.แรงลัพธ์ R ; เพื่อให้เกิดสมดุลโดยประกอบมาจากแรง N และแรง F',
         formular: [''],
         formular_list: [],
@@ -88,7 +88,7 @@ const PageSection4_1 = () => {
     },
     {
         title: 'slide3',
-        image: './Images/Section4/3.jpg',
+        image: './Images/Section4/Section4_main3.png',
         content: 'การวิเคราห์แรงเสียดทาน บนเกลียว แบ่งออกได้ 4 กรณี ลองทำให้เกิดการเคลื่ยนที่ให้ครบดูสิ',
         formular: [''],
         formular_list: '<p>เกลียวเคลื่อนที่ขึ้น</p> <p>เกลียวเคลื่อนที่ลง \nθ > ϕ</p> <p>เกลียวเคลื่อนที่ลง\nθ < ϕ</p> <p>ล็อคตัวเองได้</p>',
@@ -178,7 +178,7 @@ const PageSection4_1 = () => {
                 {slides[currentSlide].start_button}
             </div>
             <footer>
-                <button className="back-control">ย้อนกลับ</button>
+                <Link to='/Home' className="back-control">ย้อนกลับ</Link>
                 <button className='next-control' onClick={handleEndSlide}>ข้อต่อไป</button>
             </footer>
         </div>
