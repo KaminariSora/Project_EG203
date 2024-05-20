@@ -1,5 +1,5 @@
 #popup-container {
-    background: rgba(255, 222, 145, .93);
+    background: rgba(255, 222, 145, .93) !important;
 }
 
 #yellow-container {
@@ -12,7 +12,7 @@
 }
 
 #yellow-container div#content {
-    color: green;
+    /* color: green; */
     font-size: 2rem;
 }
 
@@ -23,8 +23,10 @@
 .katex {
     font-family: "Prompt", sans-serif !important;
     font-size: 2rem !important;
+    line-height: 5rem !important;
 }
 .katex .mathnormal {
     font-family: "Prompt", sans-serif !important;
     font-size: 2rem !important;
+    line-height: 5rem;
 }

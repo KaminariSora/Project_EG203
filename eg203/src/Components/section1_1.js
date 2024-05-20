@@ -142,7 +142,7 @@ const Section1_1 = () => {
                 </div>
             </div>
             <footer>
-                <Link to="#" className="back-control">ย้อนกลับ</Link>
+                <Link to="/Home" className="back-control">ย้อนกลับ</Link>
                 <button className='next-control' onClick={handleEndSlide}>ข้อต่อไป</button>
             </footer>
         </div>

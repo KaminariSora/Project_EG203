@@ -38,6 +38,10 @@
     z-index: 100;
 }
 
+.answer div.input {
+    z-index: 200;
+}
+
 .start-container {
     display: flex;
     justify-content: center;

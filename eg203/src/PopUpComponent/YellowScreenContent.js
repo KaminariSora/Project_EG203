@@ -1,21 +1,3 @@
-const YellowScreenContent = [
-    {
-        header: 'จากFree body diagram ได้เป็น',
-        src: "./Images/Section4/2.jpg",
-        formular: ['θ = tan<sup>-1</sup>M<sub>s</sub>&frac12;&pi;r'],
-    },
-    {
-        header: '2',
-        src: "./Images/Section4/2.jpg",
-        formular: [''],
-    },
-    {
-        header: '3',
-        src: "./Images/Section4/2.jpg",
-        formular: [''],
-    }
-]
-
 const Section2_1 = [
     {
         header: '1',
@@ -71,6 +53,70 @@ const Section2_2 = [
         'จากการที่ไม่ว่า N_{c}จะมีค่าเท่าใด สมการก็ถูกเสมอ','ดังนั้น คำตอบถูกเสมอ'],
     },
 ]
+
+const Section4_first = [
+    {
+        header: '\\text{จากFree body diagram ได้เป็น}',
+        src: "./Images/Section4/Section4_case1.png",
+        formular: ['โดยที่\\phi = tan^{-1}\\frac{F}{N};tan^{-1}\\mu'],
+    },
+    {
+        header: '',
+        src: "",
+        formular: ['จากสมการสมดุล',
+        '\\sum_{}^{}F_{x} = 0; S -R(sin\\theta + \\phi) = 0',
+        '\\sum_{}^{}F_{y} = 0; R(cos\\theta + \\phi) = 0'],
+    },
+    {
+        header: '',
+        src: "",
+        formular: ['เมื่อเราแก้สมการ แล้วแทนค่า S ในสมการ M = Sr',
+        'จะได้ M = Wr tan( θ + \\phi )',
+        'ถ้า M ทำให้สลักเกลียวกำลังเคลื่ยนที่ เมื่อ',
+        '\\phi = \\phi_{s} = tan^{-1}\\mu_{s}^{{-1}}',
+        'ถ้า M ทำให้ สลักเกลียวเคลื่ยนที่ เมื่อ',
+        '\\phi = \\phi_{k} = tan^{-1}\mu_{k}^{{-1}}'],
+    }
+]
+
+const Section4_second = [
+    {
+        header: '\\text{จากFree body diagram ได้เป็น}',
+        src: "./Images/Section4/Section4_case2.png",
+        formular: ['เกลียวหมุนลงได้เมื่อ moment ลดลง',
+        'เป็น M` โดยที่ M` < M '],
+    },
+    {
+        header: '',
+        src: "",
+        formular: ['เมื่อ moment = M` และมุม   จะเลื่อนมาซ้ายมือ',
+        'ของแกน n โดย θ > \\phi การสมการสมดุล',
+        'จะได้ว่า M`= Wr tan(θ > \\phi) '],
+    },
+]
+
+const Section4_third = [
+    {
+        header: '\\text{จากFree body diagram ได้เป็น}',
+        src: './Images/Section4/Section4_case3.png',
+        formular: ['จะเกิดแรง S``  จาก moment M`` (ที่ตรงข้ามกับM,M`)',
+        'จากสมการสมดุลจะได้ว่า',
+        'M`` = Wr tan(θ > \\phi)']
+
+    },
+]
+
+const Section4_forth = [
+    {
+        header: '\\text{จากFree body diagram ได้เป็น}',
+        src: './Images/Section4/Section4_case4.png',
+        formular: [
+            'เกิดสมดุลแนวดิ่งจาก',
+            'แรง ( R ) และ (W) อยู่ในแนวเดียวกัน'
+        ]
+    },
+]
+
 const Section5_1 = [
     {
         header: 'FBD\\; ของโลหะ\\; A',
@@ -109,4 +155,4 @@ const Section5_1 = [
         'M_{A}=\\frac{W_{A}}{9.81}=\\frac{21.81}{9.81}','=2.22 \\; kg'],
     },
 ]
-export { YellowScreenContent , Section2_1 , Section2_2, Section5_1}
+export { Section2_1 , Section2_2, Section4_first, Section4_second, Section4_third, Section4_forth, Section5_1}

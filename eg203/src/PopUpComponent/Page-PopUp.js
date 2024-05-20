@@ -1,7 +1,22 @@
+import './popup-content.css'
+
 const ClosePopUp = ({ setIsOpen ,x}) => {
+    const SectionList = [
+        '/Section1' ,'/Section2_1' ,'/Section3_1', '/Section4_1', '/Section5_1'
+    ]
     const handleClosePopup = () => {
-        window.location.href = '/home';
+        window.location.href = '/Home';
     };
+
+    const handleNextSection = () => {
+        const array_num = x
+        if (array_num >= 0 && array_num < SectionList.length) {
+            window.location.href = SectionList[array_num];
+        } else {
+            console.error("Invalid section number");
+            window.location.href = '/Home'
+        }
+    }
 
     return (
         <div className="popup-container">
@@ -12,7 +27,7 @@ const ClosePopUp = ({ setIsOpen ,x}) => {
                     <p>Home</p>
                 </span>
                 <span id="second-span">
-                    <img src="./Images/Section1/Next.png" id="next-section" alt="Next Section"></img>
+                    <img onClick={handleNextSection} src="./Images/Section1/Next.png" id="next-section" alt="Next Section"></img>
                     <p>Next section</p>
                 </span>
             </div>

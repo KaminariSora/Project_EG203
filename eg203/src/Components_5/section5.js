@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 import './section5.css'
 import ClosePopUp from '../PopUpComponent/Page-PopUp'
 import Solution from '../PopUpComponent/Solution-PopUp'
@@ -78,6 +79,9 @@ const Section5 = () => {
     const handleBackSlide = () => {
         setCurrentSlide((prevSlide) => prevSlide - 1);
     };
+    const handleLastPage = () => {
+        window.location.href = '/Home'
+    }
 
     return (
         <div className="container">
@@ -129,8 +133,8 @@ const Section5 = () => {
             </div>
             </div>
             <footer>
-                <button className="back-control">ย้อนกลับ</button>
-                <button className='next-control' onClick={handleEndSlide}>ข้อต่อไป</button>
+                <Link to='/Home' className="back-control">ย้อนกลับ</Link>
+                <button className='next-control' onClick={handleLastPage}>ข้อต่อไป</button>
             </footer>
         </div>
     )

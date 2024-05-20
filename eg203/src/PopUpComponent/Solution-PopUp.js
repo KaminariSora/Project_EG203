@@ -42,7 +42,7 @@ const Solution = ({setSolutionOpen, Section,textIndex, setYellowOpen}) => {
 
     const content = RedScreenContent[Section][textIndex].content ;
     const header = RedScreenContent[Section][textIndex].header;
-    console.log(RedScreenContent)
+    console.log(RedScreenContent[Section][textIndex])
     return (
         <div className="popup-container" style={styleBox}>  
             <div className="popup-content" id="popup-content">

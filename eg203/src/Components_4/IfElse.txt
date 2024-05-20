@@ -1,0 +1,30 @@
+// 1. รับค่าโมเมนต์ (moment), μs (ค่าสัมประสิทธิ์แรงเสียดทาน), และ theta (มุมของเกลียว)
+const moment = parseFloat(prompt("กรุณาใส่ค่าโมเมนต์ (moment) ในหน่วย Nm: "));
+const μs = parseFloat(prompt("กรุณาใส่ค่าสัมประสิทธิ์แรงเสียดทาน (μs): "));
+const theta = parseFloat(prompt("กรุณาใส่มุมของเกลียว (θ) ในหน่วยองศา: "));
+
+let alpha; // ประกาศตัวแปรเพื่อเก็บค่าของมุมของแรงเสียดทาน (α)
+
+// 2. คำนวณค่าของมุมของแรงเสียดทาน (α) ด้วย arctan(μs)
+alpha = Math.atan(μs); 
+
+// 3. คำนวณแรงเสียดทานในทิศทางแนวแกน (Axial Friction) โดยใช้สูตร F = moment / (d * μs)
+const d = 1; // เราจำลองให้เส้นผ่านศูนย์กลางของเกลียวเป็น 1 (ต้องเปลี่ยนแปลงตามเงื่อนไขที่แท้จริง)
+const axialFriction = moment / (d * μs);
+
+// 4. ตรวจสอบและแสดงผลลัพธ์
+if (theta <= alpha) {
+    console.log("สกรูอยู่ในสถานะ Self-locking");
+    //case_3
+} else if (theta > alpha && theta < 90) {
+    console.log("สกรูอยู่ในสถานะ Upward Screw");
+    //case_1
+} else if (theta > alpha && theta > 90) {
+    console.log("สกรูอยู่ในสถานะ Downward Screw");
+    //case_2
+} else if (theta < alpha) {
+    console.log("สกรูอยู่ในสถานะ Downward Screw"); 
+    //case_4
+} else {
+    console.log("สกรูอยู่ในสถานะ Impending motion");
+}
