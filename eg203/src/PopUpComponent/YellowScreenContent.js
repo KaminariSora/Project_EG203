@@ -110,11 +110,11 @@ const Section4_forth = [
     {
         header: 'จากFree body diagram ได้เป็น',
         src: './Images/Section4/2.jpg',
-        formula: [
+        formular: [
             'เกิดสมดุลแนวดิ่งจาก',
-            // 'แรง \\( R \\) และ \\( W \\) อยู่ในแนวเดียวกัน'
+            'แรง ( R ) และ (W) อยู่ในแนวเดียวกัน'
         ]
-    }
+    },
 ]
 
 const Section5_1 = [

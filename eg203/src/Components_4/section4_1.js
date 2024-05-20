@@ -19,7 +19,7 @@ const PageSection4_1 = () => {
     const [SolutionOpen, setSolutionOpen] = useState(false)
     const [yellowOpen, setYellowOpen] = useState(false)
     const [RedSectionNav, setRedSectionNav] = useState(0)
-    const [DataSectionNav, setDataSectionNav] = useState("")
+    const [DataSectionNav, setDataSectionNav] = useState()
 
     const handleW_value = (event) => {
         const W = parseInt(event.target.value)
@@ -45,22 +45,22 @@ const PageSection4_1 = () => {
             console.log("สกรูอยู่ในสถานะ Self-locking");
             console.log(DataSectionNav)
             setRedSectionNav(3)
-            setDataSectionNav('Section4_forth')
+            setDataSectionNav(Section4_forth)
             //case3
         } else if (theta > alpha && theta < 90) {
             console.log("สกรูอยู่ในสถานะ Upward Screw");
             setRedSectionNav(0)
-            setDataSectionNav('Section4_first')
+            setDataSectionNav(Section4_first)
             //case_1
         } else if (theta > alpha && theta > 90) {
             console.log("สกรูอยู่ในสถานะ Downward Screw");
             setRedSectionNav(1)
-            setDataSectionNav('Section4_second')
+            setDataSectionNav(Section4_second)
             //case_2
         } else if (theta < alpha) {
             console.log("สกรูอยู่ในสถานะ Downward Screw"); 
             setRedSectionNav(3)
-            setDataSectionNav('Section4_forth')
+            setDataSectionNav(Section4_forth)
             //case_4
         } else {
             console.log("สกรูอยู่ในสถานะ Impending motion");
