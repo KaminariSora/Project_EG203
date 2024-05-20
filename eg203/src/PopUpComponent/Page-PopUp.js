@@ -1,6 +1,6 @@
 const ClosePopUp = ({ setIsOpen ,x}) => {
     const handleClosePopup = () => {
-        setIsOpen(false);
+        window.location.href = '/home';
     };
 
     return (

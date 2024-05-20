@@ -14,12 +14,17 @@ import {
 import Section4_1 from './Components_4/section4_1';
 import PageSection2_2 from './Components_2/section2_2';
 import PageSection2_1 from './Components_2/section2';
+import Section5 from './Components_5/section5';
 
 
 
 const router = createBrowserRouter([
   {
     path: "/",
+    element: <App/>,
+  },
+  {
+    path: "/home",
     element: <App/>,
   },
   {
@@ -37,6 +42,10 @@ const router = createBrowserRouter([
   {
     path: "Section4_1",
     element: <Section4_1/>
+  },
+  {
+    path: "Section5_1",
+    element: <Section5/>
   },
   {
     path: "Slider-test",

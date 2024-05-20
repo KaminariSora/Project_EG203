@@ -82,8 +82,8 @@ const Section5 = () => {
     return (
         <div className="container">
             <img className="logo" src="./Images/LogoApp.png"></img>
-            <div className="title">ส่วนที่ 2 ข้อที่ 1</div>
-            {isOpen && <ClosePopUp setIsOpen={setIsOpen} x={4}/>}
+            <div className="title">ส่วนที่ 5 ข้อที่ 1</div>
+            {isOpen && <ClosePopUp setIsOpen={setIsOpen} x={5}/>}
             {SolutionOpen && <Solution setSolutionOpen={setSolutionOpen} setYellowOpen={setYellowOpen} textIndex={0} Section={"Section5"}/>}
             {yellowOpen && <YellowPopUp setYellowOpen={setYellowOpen} DataList={Section5_1}/>}
             <div className="problem">
