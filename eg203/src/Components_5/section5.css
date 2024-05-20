@@ -108,3 +108,15 @@
     color: #333;
     font-weight: bold;
 }
+
+.font .katex {
+    font-size: 20px !important;
+}
+
+.font .katex .mathnormal {
+    font-size: 20px !important;
+}
+
+.hidden {
+    display: none !important;
+}

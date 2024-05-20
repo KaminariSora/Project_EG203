@@ -1,3 +1,5 @@
+import Section5 from "../Components_5/section5"
+
 const RedScreenContent = {
     Section1: [{
         header: 'ยังใส่ข้อมูลไม่ครบทุกช่อง',
@@ -30,6 +32,11 @@ const RedScreenContent = {
         //index3
         header: 'ยังใส่ข้อมูลไม่ครบทุกช่อง'
     },],
+    Section5: [{
+        //index0
+        header: "ไม่มีการเลื่อน",
+        content: ""
+    }],
 }
 // console.log(RedScreenContent.Section4[0].header)
 export default RedScreenContent

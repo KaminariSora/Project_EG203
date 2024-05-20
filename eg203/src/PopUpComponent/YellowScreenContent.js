@@ -71,4 +71,42 @@ const Section2_2 = [
         'จากการที่ไม่ว่า N_{c}จะมีค่าเท่าใด สมการก็ถูกเสมอ','ดังนั้น คำตอบถูกเสมอ'],
     },
 ]
-export { YellowScreenContent , Section2_1 , Section2_2}
+const Section5_1 = [
+    {
+        header: 'FBD\\; ของโลหะ\\; A',
+        src: "./Images/Section5/Section5_2.png",
+        formular: ['เขียนสมการสมดุลได้ว่า',' \\sum F_{x} = 0;\\; T_{1} - 0.2 N_{A} - W_{A} sin 30 = 0',
+        ' \\sum F_{y} = 0;\\; N_{A} - W_{A} cos 30 = 0'],
+    },
+    {
+        header: 'FBD\\; ของโลหะ\\; B',
+        src: "./Images/Section5/Section5_3.png",
+        formular: ['เขียนสมการสมดุลได้ว่า',' \\sum F_{x} = 0;\\; T_{2} - 20(9.81) sin30 +0.3N_{B} +0.2N_{A} = 0',
+        ' \\sum F_{y} = 0;\\; N_{B} - N_{A} -20(9.81) cos30  = 0'],
+    },
+    {
+        header: 'เมื่อนำสมการทั้งหมดมารวมกันกับสมการหา\\;T_{2}',
+        
+        formular: ['\\sum F_{x} = 0;\\; T_{1} - 0.2 N_{A} - W_{A} sin 30 = 0 \\longrightarrow ①',
+        ' \\sum F_{y} = 0;\\; N_{A} - W_{A} cos 30 = 0 \\longrightarrow ②',
+        ' \\sum F_{x} = 0;\\; T_{2} - 20(9.81) sin30 +0.3N_{B} +0.2N_{A} = 0 \\longrightarrow ③',
+        '\\sum F_{y} = 0;\\; N_{B} - N_{A} -20(9.81) cos30  = 0 \\longrightarrow ④',
+        'T_{2} = T_{1}e^{0.3x} \\longrightarrow ⑤'
+        ],
+    },
+    {
+        header: 'จะแก้สมการได้',
+       
+        formular: ['T_{1} = 14.68N',' T_{2} =37.8N ',
+        'N_{A} = 18.89N',' N_{B} =188.88N ',
+        'W_{A} = 21.81N'
+        ],
+    },
+    {
+        header: 'เมื่อ\\; W_{A}\\; คือ\\; น้ำหนักของแท่งโลหะ\\; A',
+       
+        formular: ['ดังนั้น\\; มวลของ\\; A\\; ที่น้อยที่สุด\\; คือ',
+        'M_{A}=\\frac{W_{A}}{9.81}=\\frac{21.81}{9.81}','=2.22 \\; kg'],
+    },
+]
+export { YellowScreenContent , Section2_1 , Section2_2, Section5_1}
