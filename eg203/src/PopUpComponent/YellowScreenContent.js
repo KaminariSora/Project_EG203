@@ -54,6 +54,23 @@ const Section2_2 = [
     },
 ]
 
+const Section31 = [
+    {
+        header: '',
+    },
+]
+
+const Section32 = [
+    {
+        header: '',
+        src: './Images/Section3/2/Section3-2.2.png'
+    },
+    {
+        header: '',
+        src: './Images/Section3/2/Section3-2.3.png'
+    }
+]
+
 const Section4_first = [
     {
         header: '\\text{จากFree body diagram ได้เป็น}',

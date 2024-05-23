@@ -15,6 +15,8 @@ import Section4_1 from './Components_4/section4_1';
 import PageSection2_2 from './Components_2/section2_2';
 import PageSection2_1 from './Components_2/section2';
 import Section5 from './Components_5/section5';
+import Section31 from './Components_3/section3_1';
+import Section32 from './Components_3/section3_2';
 
 
 
@@ -38,6 +40,14 @@ const router = createBrowserRouter([
   {
     path: "Section2_2",
     element: <PageSection2_2/>
+  },
+  {
+    path: "Section31",
+    element: <Section31/>
+  },
+  {
+    path: "Section32",
+    element: <Section32/>
   },
   {
     path: "Section4_1",
