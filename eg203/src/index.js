@@ -42,11 +42,11 @@ const router = createBrowserRouter([
     element: <PageSection2_2/>
   },
   {
-    path: "Section31",
+    path: "Section3_1",
     element: <Section3_1/>
   },
   {
-    path: "Section32",
+    path: "Section3_2",
     element: <Section3_2/>
   },
   {
