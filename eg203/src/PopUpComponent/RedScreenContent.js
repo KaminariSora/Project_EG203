@@ -14,6 +14,14 @@ const RedScreenContent = {
         //index0
         header: "ลิ่มเกิดการเลื่อน",
         content: "",
+    },{
+        //index1
+        header: "แรงเสียดทานต้านการเคลื่อนที่ได้",
+        content: "ลิ่มล็อคตัวเอง",
+    },{
+        //index2
+        header: "ลิ่มยก block ขึ้นได้",
+        content: "",
     }],
     Section4: [
     {

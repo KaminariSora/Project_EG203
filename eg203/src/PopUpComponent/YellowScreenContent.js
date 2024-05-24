@@ -57,17 +57,20 @@ const Section2_2 = [
 const Section31 = [
     {
         header: '',
+        formular: ['']
     },
 ]
 
 const Section32 = [
     {
-        header: '',
-        src: './Images/Section3/2/Section3-2.2.png'
+        header: '1',
+        src: './Images/Section3/2/Section3-2.2.png',
+        formular: ['จาก Free Body Diagram ของโครงสร้าง','เมื่อ','']
     },
     {
-        header: '',
-        src: './Images/Section3/2/Section3-2.3.png'
+        header: '2',
+        src: './Images/Section3/2/Section3-2.3.png',
+        formular: []
     }
 ]
 

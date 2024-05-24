@@ -5,7 +5,7 @@ import ClosePopUp from '../PopUpComponent/Page-PopUp'
 import Solution from '../PopUpComponent/Solution-PopUp'
 import YellowPopUp from '../PopUpComponent/YellowPopUp'
 
-const Section32 = () => {
+const Section3_2 = () => {
     //const [theta, setTheta] = useState(5);  // Default input theta
     //const [coef, setCoef] = useState(0.25); // Default coefficient of friction
     const [p_value, setP_value] = useState(0); // Default P value
@@ -24,13 +24,12 @@ const Section32 = () => {
     const ImageStatus = [{
         title: '',
         src: '../Images/Section3/2/Section3-2.1.png'
-    },{
-        title: '',
-        src: '../Images/Section3/2/Section3-2.2.png'
-    },{
-        title: '',
-        src: '../Images/Section3/2/Section3-2.3.png'
     }];
+
+    const handleP_value = (event) => {
+        const P = parseFloat(event.target.value);
+        setP_value(P);
+    };
 
     const slides = [{
         title: 'Slide 1',
@@ -59,11 +58,6 @@ const Section32 = () => {
         }
         console.log("CurrentImage : ", currentImage);
     }, [p_value]);
-
-    const handleP_value = (event) => {
-        const P = parseFloat(event.target.value);
-        setP_value(P);
-    };
 
     return (
         <div className="container">
@@ -118,4 +112,4 @@ const Section32 = () => {
     )
 }
 
-export default Section32
+export default Section3_2

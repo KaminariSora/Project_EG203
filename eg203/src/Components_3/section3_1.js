@@ -5,7 +5,7 @@ import ClosePopUp from '../PopUpComponent/Page-PopUp'
 import Solution from '../PopUpComponent/Solution-PopUp'
 import YellowPopUp from '../PopUpComponent/YellowPopUp'
 
-const Section31 = () => {
+const Section3_1 = () => {
     const [theta_value, setTheta_value] = useState(5);  // Default input theta
     const [coef_value, setCoef_value] = useState(0.25); // Default coefficient of friction
     const [input_P, setInput_P] = useState(10); // Default P value
@@ -20,13 +20,6 @@ const Section31 = () => {
     const ImageStatus = [{
         title: '',
         src: '../Images/Section3/1/Section3-1.png'
-    }];
-
-    const slides = [{
-        title: 'Slide 1',
-        content: 'ลิ่ม เป็นเครื่องทุ่นแรงที่ใช้ในการยกหรือปรับตำแหน่งของวัตถุที่มีน้ำหนักมากๆ',
-        formular: [],
-        note: '',
     }];
 
     const handleTheta_value = (event) =>{
@@ -67,18 +60,48 @@ const Section31 = () => {
         const N3 = N2*Math.cos(radians)-(coef*N2*Math.sin(radians));
         const P_math = ((coef*N3)+(coef*N2*Math.cos(radians))+N2*Math.sin(radians));
         if (P < P_math){
-            setSolutionOpen(true);
             console.log("ลิ่มเกิดการเลื่อน");
+            setRedSectionNav(0);
         } else if (P_math == 0 && P == 0){
-            setSolutionOpen(true);
             console.log("แรงเสียดทานต้านการเคลื่อนที่ได้ ลิ่มล็อคตัวเอง");
+            setRedSectionNav(1);
         } else {
             console.log("ลิ่มยก block ขึ้นได้");
+            setRedSectionNav(2);
         }
         setSolutionOpen(true);
         console.log("Click")
     }
 
+    const slides = [{
+        title: 'Slide 1',
+        content: 'ลิ่ม เป็นเครื่องทุ่นแรงที่ใช้ในการยกหรือปรับตำแหน่งของวัตถุที่มีน้ำหนักมากๆ',
+        formular: [],
+        note: "",
+        answer_box: (
+            <div className="answer">
+                <div className="input" id="theta-value">
+                    <p>ใส่ค่า θ</p>
+                    <input type="number" placeholder="θ =" onChange={handleTheta_value} className="number"></input>
+                </div>
+
+                <div className="input" id="coef-value">
+                    <p>ใส่ค่า μ<sub>s</sub></p>
+                    <input type="number" placeholder="μs = " onChange={handleCoef_value} className="number"></input>
+                </div>
+                
+                <div className="input" id="p-value">
+                    <p>ใส่ค่า P</p>
+                    <input type="number" placeholder="P = " onChange={handleP_value} className="number"></input>
+                </div>
+            </div>
+        ),
+        start_button: (
+            <div className='start-container'>
+                <button id='cal-btn' onClick={calculate}>ดูผลลัพธ์</button>
+            </div>
+        )
+    }];
 
     return (
         <div className="container">
@@ -119,22 +142,6 @@ const Section31 = () => {
                     </div>
                 )}
             </div>
-            <div className="answer">
-                <div className="input" id="theta-value">
-                    <p>ใส่ค่า θ</p>
-                    <input type="number" placeholder="θ =" onChange={(e) => setTheta_value(Number(e.target.value))} className="number"></input>
-                </div>
-
-                <div className="input" id="coef-value">
-                    <p>ใส่ค่า μ<sub>s</sub></p>
-                    <input type="number" placeholder="μs = " onChange={(e) => setCoef_value(Number(e.target.value))} className="number"></input>
-                </div>
-                
-                <div className="input" id="p-value">
-                    <p>ใส่ค่า P</p>
-                    <input type="number" placeholder="P = " onChange={(e) => setInput_P(Number(e.target.value))} className="number"></input>
-                </div>
-            </div>
             <footer>
                 <Link to="/Home" className="back-control">ย้อนกลับ</Link>
                 <button className='next-control' onClick={handleNextQuestion}>ข้อต่อไป</button>
@@ -143,4 +150,4 @@ const Section31 = () => {
     )
 }
 
-export default Section31
+export default Section3_1
