@@ -2,7 +2,7 @@ import './popup-content.css'
 
 const ClosePopUp = ({ setIsOpen ,x}) => {
     const SectionList = [
-        '/Section1' ,'/Section2_1' ,'/Section3_1', '/Section4_1', '/Section5_1'
+        '/Section1' ,'/Section2_1' ,'/Section3_2', '/Section4_1', '/Section5_1'
     ]
     const handleClosePopup = () => {
         window.location.href = '/Home';
