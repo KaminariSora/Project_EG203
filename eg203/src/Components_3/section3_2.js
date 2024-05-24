@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useState, useEffect ,useContext} from 'react';
+import { useState, useEffect } from 'react';
 import './section3.css';
 import ClosePopUp from '../PopUpComponent/Page-PopUp'
 import Solution from '../PopUpComponent/Solution-PopUp'
@@ -33,6 +33,29 @@ const Section3_2 = () => {
         note: '',
     }];
 
+    useEffect(() => {
+        console.log(p_value)
+
+        if(p_value > 3.29){
+            setSolutionOpen(true);
+            console.log("ลิ่มเกิดการเลื่อน")
+        }
+        else{
+            setSolutionOpen(false);
+            setP_value(3.29);
+        }
+
+    }, [p_value]);
+
+    useEffect(() => {
+        console.log(p_value)
+
+        if(!SolutionOpen){
+            setP_value(3.29);
+        }
+
+    }, [SolutionOpen]);
+
     const handleNextSlide = () => {
         setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
     };
@@ -46,14 +69,7 @@ const Section3_2 = () => {
         console.log("end slide");
     };
 
-    useEffect(() => {
-        const def_P = 3.29;
-        if (p_value > def_P) {
-            console.log("ลิ่มเกิดการเลื่อน");
-            setRedSectionNav(0);
-        }
-        console.log("CurrentImage : ", currentImage);
-    }, [p_value]);
+    
 
     return (
         <div className="container">
@@ -100,6 +116,9 @@ const Section3_2 = () => {
                     <div className='range-container'>
                         <input type='range' min="0.0" max="10.0" step="0.01" onChange={handleP_value} className='range'></input>
                     </div>
+                </div>
+                <div className="start-container">
+
                 </div>
             </div>
             <footer>

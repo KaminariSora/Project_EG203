@@ -57,7 +57,8 @@ const Section2_2 = [
 const Section3_1 = [
     {
         header: '1',
-        formular: ['']
+        src: './Images/Section3/1/Section3-1.png',
+        formular: ['ลองวาด FBD ก่อนคำนวณ']
     },
 ]
 
@@ -77,7 +78,7 @@ const Section3_2 = [
         'N_{B}-2.312\sin5^{\circ}-15.415\cos5^{\circ} = 0','N_{B} = 15.558\space kN',
         '\sum F_{x} = 0 ; \space\space 0.15N_{B}+2.312\cos5^{\circ}-N_{A}\sin5^{\circ}-P = 0',
         '0.15(15.558)+2.312\cos5^{\circ}-15.545\sin5^{\circ}-P = 0','P = 3.29\space kN']
-    }
+    },
 ]
 
 const Section4_first = [

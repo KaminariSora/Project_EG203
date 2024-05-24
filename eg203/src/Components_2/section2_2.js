@@ -92,7 +92,7 @@ const PageSection2_2 = () => {
                     </div>
                 </div>
                 <div className='start-container'>
-            </div>
+                </div>
             </div>
             <footer>
                 <Link to="/Section2_1" className="back-control">ย้อนกลับ</Link>
