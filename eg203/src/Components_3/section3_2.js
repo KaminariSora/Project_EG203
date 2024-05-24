@@ -9,17 +9,12 @@ const Section3_2 = () => {
     //const [theta, setTheta] = useState(5);  // Default input theta
     //const [coef, setCoef] = useState(0.25); // Default coefficient of friction
     const [p_value, setP_value] = useState(0); // Default P value
-    //const radians = theta * (Math.PI / 180);
-    //const math_N1 = coef*Math.cos(radians)+Math.sin(radians); /// สัมประสิทธิหน้าN2 
-    //const N2 = 500/((-1*coef*math_N1)+(Math.cos(radians))-(coef*Math.sin(radians)));
-    //const N1 = math_N1*N2;
-    //const N3 = N2*Math.cos(radians)-(coef*N2*Math.sin(radians));
-    //const P_math = ((coef*N3)+(coef*N2*Math.cos(radians))+N2*Math.sin(radians));
     const [currentSlide, setCurrentSlide] = useState(0);
     const [currentImage, setCurrentImage] = useState(0);
     const [SolutionOpen, setSolutionOpen] = useState(false)
     const [yellowOpen, setYellowOpen] = useState(false)
     const [RedSectionNav, setRedSectionNav] = useState(0)
+    const [DataSectionNav, setDataSectionNav] = useState()
     const [isOpen, setIsOpen] = useState(false);
     const ImageStatus = [{
         title: '',
@@ -54,7 +49,8 @@ const Section3_2 = () => {
     useEffect(() => {
         const def_P = 3.29;
         if (p_value > def_P) {
-            console.log("ลิ่มเกิดการเลื่อน");;
+            console.log("ลิ่มเกิดการเลื่อน");
+            setRedSectionNav(0);
         }
         console.log("CurrentImage : ", currentImage);
     }, [p_value]);
@@ -64,6 +60,8 @@ const Section3_2 = () => {
             <img className="logo" src="./Images/LogoApp.png"></img>
             <div className="title">ส่วนที่ 3 ข้อที่ 2</div>
             {isOpen && <ClosePopUp setIsOpen={setIsOpen} x={1} />}
+            {SolutionOpen && <Solution setSolutionOpen={setSolutionOpen} setYellowOpen={setYellowOpen} textIndex={RedSectionNav} Section={"Section3_2"} />} 
+            {yellowOpen && <YellowPopUp setYellowOpen={setYellowOpen} DataList={DataSectionNav}/>}
             <div className="problem">
                 <p>{ImageStatus[currentImage].title}</p>
                 

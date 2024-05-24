@@ -78,29 +78,6 @@ const Section3_1 = () => {
         content: 'ลิ่ม เป็นเครื่องทุ่นแรงที่ใช้ในการยกหรือปรับตำแหน่งของวัตถุที่มีน้ำหนักมากๆ',
         formular: [],
         note: "",
-        answer_box: (
-            <div className="answer">
-                <div className="input" id="theta-value">
-                    <p>ใส่ค่า θ</p>
-                    <input type="number" placeholder="θ =" onChange={handleTheta_value} className="number"></input>
-                </div>
-
-                <div className="input" id="coef-value">
-                    <p>ใส่ค่า μ<sub>s</sub></p>
-                    <input type="number" placeholder="μs = " onChange={handleCoef_value} className="number"></input>
-                </div>
-                
-                <div className="input" id="p-value">
-                    <p>ใส่ค่า P</p>
-                    <input type="number" placeholder="P = " onChange={handleP_value} className="number"></input>
-                </div>
-            </div>
-        ),
-        start_button: (
-            <div className='start-container'>
-                <button id='cal-btn' onClick={calculate}>ดูผลลัพธ์</button>
-            </div>
-        )
     }];
 
     return (
@@ -109,7 +86,7 @@ const Section3_1 = () => {
             <div className="title">ส่วนที่ 3 ข้อที่ 1</div>
             {isOpen && <ClosePopUp setIsOpen={setIsOpen} x={1} />}
             {/* //เงื่อนไข array หน้าสีแดง */}
-            {SolutionOpen && <Solution setSolutionOpen={setSolutionOpen} setYellowOpen={setYellowOpen} textIndex={RedSectionNav} Section={"Section3"} />} 
+            {SolutionOpen && <Solution setSolutionOpen={setSolutionOpen} setYellowOpen={setYellowOpen} textIndex={RedSectionNav} Section={"Section3_1"} />} 
             {yellowOpen && <YellowPopUp setYellowOpen={setYellowOpen} DataList={DataSectionNav}/>}
             <div className="problem">
                 <p>{ImageStatus[currentImage].title}</p>
@@ -141,6 +118,25 @@ const Section3_1 = () => {
                         </button>
                     </div>
                 )}
+            </div>
+            <div className="answer">
+                <div className="input" id="theta-value">
+                    <p>ใส่ค่า θ</p>
+                    <input type="number" placeholder="θ =" onChange={handleTheta_value} className="number"></input>
+                </div>
+
+                <div className="input" id="coef-value">
+                    <p>ใส่ค่า μ<sub>s</sub></p>
+                    <input type="number" placeholder="μs = " onChange={handleCoef_value} className="number"></input>
+                </div>
+                
+                <div className="input" id="p-value">
+                    <p>ใส่ค่า P</p>
+                    <input type="number" placeholder="P = " onChange={handleP_value} className="number"></input>
+                </div>
+            </div>
+            <div className='start-container'>
+                <button id='cal-btn' onClick={calculate}>ดูผลลัพธ์</button>
             </div>
             <footer>
                 <Link to="/Home" className="back-control">ย้อนกลับ</Link>

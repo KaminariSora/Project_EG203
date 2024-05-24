@@ -54,23 +54,29 @@ const Section2_2 = [
     },
 ]
 
-const Section31 = [
+const Section3_1 = [
     {
-        header: '',
+        header: '1',
         formular: ['']
     },
 ]
 
-const Section32 = [
+const Section3_2 = [
     {
         header: '1',
         src: './Images/Section3/2/Section3-2.2.png',
-        formular: ['จาก Free Body Diagram ของโครงสร้าง','เมื่อ','']
+        formular: ['จาก Free Body Diagram ของโครงสร้าง','เมื่อ \sum M_{C} = 0;',
+        '\frac{4}{5}(15)(0.6)+\frac{3}{5}(15)(0.75)+8(0.5)-N_{A}\cos5^{\circ}(1.2) = 0',
+        '-N_{A}\sin5^{\circ}(0.75)-0.25N_{A}\cos5^{\circ}+25N_{A}sin5^{\circ}(1.2) = 0',
+        'N_{A} = 12.628 \space kN']
     },
     {
         header: '2',
         src: './Images/Section3/2/Section3-2.3.png',
-        formular: []
+        formular: ['จะได้ว่า','\sum F_{y} = 0 ; \space\space N_{B}-2.312\sin5^{\circ}-N_{A}\cos5^{\circ} = 0',
+        'N_{B}-2.312\sin5^{\circ}-15.415\cos5^{\circ} = 0','N_{B} = 15.558\space kN',
+        '\sum F_{x} = 0 ; \space\space 0.15N_{B}+2.312\cos5^{\circ}-N_{A}\sin5^{\circ}-P = 0',
+        '0.15(15.558)+2.312\cos5^{\circ}-15.545\sin5^{\circ}-P = 0','P = 3.29\space kN']
     }
 ]
 
@@ -175,4 +181,4 @@ const Section5_1 = [
         'M_{A}=\\frac{W_{A}}{9.81}=\\frac{21.81}{9.81}','=2.22 \\; kg'],
     },
 ]
-export { Section2_1 , Section2_2, Section4_first, Section4_second, Section4_third, Section4_forth, Section5_1}
+export { Section2_1 , Section2_2, Section3_1, Section3_2, Section4_first, Section4_second, Section4_third, Section4_forth, Section5_1}
