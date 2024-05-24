@@ -77,7 +77,7 @@ const Section3_2 = () => {
             <div className="title">ส่วนที่ 3 ข้อที่ 2</div>
             {isOpen && <ClosePopUp setIsOpen={setIsOpen} x={1} />}
             {SolutionOpen && <Solution setSolutionOpen={setSolutionOpen} setYellowOpen={setYellowOpen} textIndex={RedSectionNav} Section={"Section3_2"} />} 
-            {yellowOpen && <YellowPopUp setYellowOpen={setYellowOpen} DataList={DataSectionNav}/>}
+            {yellowOpen && <YellowPopUp setYellowOpen={setYellowOpen} DataList={Section3_2}/>}
             <div className="problem">
                 <p>{ImageStatus[currentImage].title}</p>
                 

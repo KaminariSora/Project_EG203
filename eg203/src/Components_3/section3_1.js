@@ -87,7 +87,7 @@ const Section3_1 = () => {
             {isOpen && <ClosePopUp setIsOpen={setIsOpen} x={1} />}
             {/* //เงื่อนไข array หน้าสีแดง */}
             {SolutionOpen && <Solution setSolutionOpen={setSolutionOpen} setYellowOpen={setYellowOpen} textIndex={RedSectionNav} Section={"Section3_1"} />} 
-            {yellowOpen && <YellowPopUp setYellowOpen={setYellowOpen} DataList={DataSectionNav}/>}
+            {yellowOpen && <YellowPopUp setYellowOpen={setYellowOpen} DataList={Section3_1}/>}
             <div className="problem">
                 <p>{ImageStatus[currentImage].title}</p>
                 
