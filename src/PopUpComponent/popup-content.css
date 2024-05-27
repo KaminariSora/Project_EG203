@@ -1,0 +1,17 @@
+#popup-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.5rem;
+}
+
+#popup-content #content:hover {
+    transform: scale(1.1);
+}
+
+#first-span img:hover,
+#second-span img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
