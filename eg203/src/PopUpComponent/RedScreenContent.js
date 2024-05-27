@@ -1,4 +1,5 @@
 import Section5 from "../Components_5/section5"
+import { Section3_1 } from "./YellowScreenContent"
 
 const RedScreenContent = {
     Section1: [{
@@ -10,9 +11,24 @@ const RedScreenContent = {
         header: "เสาล้มแล้ว",
         content: ""
     }],
-    Section3: [{
-
+    Section3_1: [{
+        //index0
+        header: "ลิ่มเกิดการเลื่อน",
+        content: "",
+    },{
+        //index1
+        header: "แรงเสียดทานต้านการเคลื่อนที่ได้",
+        content: "ลิ่มล็อคตัวเอง",
+    },{
+        //index2
+        header: "ลิ่มยก block ขึ้นได้",
+        content: "",
     }],
+    Section3_2: [{
+        //index0
+        header: "ลิ่มเกิดการเลื่อน",
+        content: "",
+    },],
     Section4: [
     {
         //index0
