@@ -1,5 +1,11 @@
 #popup-container {
     background: rgba(255, 222, 145, .93) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    min-height: 300px;
+    z-index: 10000;
 }
 
 #yellow-container {

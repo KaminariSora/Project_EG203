@@ -4,8 +4,9 @@ import './section3.css';
 import ClosePopUp from '../PopUpComponent/Page-PopUp'
 import Solution from '../PopUpComponent/Solution-PopUp'
 import YellowPopUp from '../PopUpComponent/YellowPopUp'
+import { Section3_2 } from '../PopUpComponent/YellowScreenContent';
 
-const Section3_2 = () => {
+const PageSection3_2 = () => {
     //const [theta, setTheta] = useState(5);  // Default input theta
     //const [coef, setCoef] = useState(0.25); // Default coefficient of friction
     const [p_value, setP_value] = useState(0); // Default P value
@@ -38,6 +39,7 @@ const Section3_2 = () => {
 
         if(p_value > 3.29){
             setSolutionOpen(true);
+            setDataSectionNav(Section3_2)
             console.log("ลิ่มเกิดการเลื่อน")
         }
         else{
@@ -75,9 +77,9 @@ const Section3_2 = () => {
         <div className="container">
             <img className="logo" src="./Images/LogoApp.png"></img>
             <div className="title">ส่วนที่ 3 ข้อที่ 2</div>
-            {isOpen && <ClosePopUp setIsOpen={setIsOpen} x={1} />}
+            {isOpen && <ClosePopUp setIsOpen={setIsOpen} x={3} />}
             {SolutionOpen && <Solution setSolutionOpen={setSolutionOpen} setYellowOpen={setYellowOpen} textIndex={RedSectionNav} Section={"Section3_2"} />} 
-            {yellowOpen && <YellowPopUp setYellowOpen={setYellowOpen} DataList={Section3_2}/>}
+            {yellowOpen && <YellowPopUp setYellowOpen={setYellowOpen} DataList={DataSectionNav}/>}
             <div className="problem">
                 <p>{ImageStatus[currentImage].title}</p>
                 
@@ -129,4 +131,4 @@ const Section3_2 = () => {
     )
 }
 
-export default Section3_2
+export default PageSection3_2
