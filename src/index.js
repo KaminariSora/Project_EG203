@@ -3,72 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Section1_1 from './Components/section1_1';
-import SliderTest from './Components/slider-test';
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-  Link,
-} from "react-router-dom";
-import Section4_1 from './Components_4/section4_1';
-import PageSection2_2 from './Components_2/section2_2';
-import PageSection2_1 from './Components_2/section2';
-import Section5 from './Components_5/section5';
-import Section3_1 from './Components_3/section3_1';
-import Section3_2 from './Components_3/section3_2';
-
-
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App/>,
-  },
-  {
-    path: "/Home",
-    element: <App/>,
-  },
-  {
-    path: "Section1_1",
-    element: <Section1_1/>
-  },
-  {
-    path: "Section2_1",
-    element: <PageSection2_1/>
-  },
-  {
-    path: "Section2_2",
-    element: <PageSection2_2/>
-  },
-  {
-    path: "Section3_1",
-    element: <Section3_1/>
-  },
-  {
-    path: "Section3_2",
-    element: <Section3_2/>
-  },
-  {
-    path: "Section4_1",
-    element: <Section4_1/>
-  },
-  {
-    path: "Section5_1",
-    element: <Section5/>
-  },
-  {
-    path: "Slider-test",
-    element: <SliderTest/>
-  }
-]);
+import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <RouterProvider router={router} />
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
