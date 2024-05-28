@@ -54,7 +54,7 @@ const PageSection2_1 = () => {
             setTheta(theta_value);
         }
         else if(!SolutionOpen){
-            setTheta(45);
+            setTheta(90);
         }
 
     }, [SolutionOpen]);

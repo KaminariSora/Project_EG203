@@ -44,7 +44,7 @@ const PageSection3_2 = () => {
         }
         else{
             setSolutionOpen(false);
-            setP_value(3.29);
+            setP_value(p_value);
         }
 
     }, [p_value]);
@@ -53,7 +53,7 @@ const PageSection3_2 = () => {
         console.log(p_value)
 
         if(!SolutionOpen){
-            setP_value(3.29);
+            setP_value(0);
         }
 
     }, [SolutionOpen]);

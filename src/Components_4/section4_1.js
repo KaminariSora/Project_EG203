@@ -22,15 +22,28 @@ const PageSection4_1 = () => {
     const [DataSectionNav, setDataSectionNav] = useState()
 
     const handleW_value = (event) => {
-        const W = parseInt(event.target.value)
+        let W = parseFloat(event.target.value)
+        if(W>1){
+            W = 1
+        }
+        if(W<0){
+            W = 0
+        }
+        console.log(W+"   asdahdbhabsdhbahdsbahbdhbahd")
         setW_value(W)
     }
     const handleM_value = (event) => {
-        const M = parseInt(event.target.value)
+        let M = parseInt(event.target.value)
         setM_value(M)
     }
     const handleAngle = (event) => {
-        const A = parseInt(event.target.value)
+        let A = parseInt(event.target.value)
+        if(A>90){
+            A = 90
+        }
+        if(A<0){
+            A = 0
+        }
         setA_value(A)
     }
     const calculate = (event) => {
@@ -105,13 +118,13 @@ const PageSection4_1 = () => {
                 <div className="input" id="w-value">
                     <p>ใส่ค่า μ</p>
                     {/* <label>W = </label> */}
-                    <input type='number' placeholder="μ = " onChange={handleW_value} className='number'></input>
+                    <input type='number' placeholder="μ = " onChange={handleW_value} className='number' step="0.1" value={w_value}></input>
                 </div>
     
                 <div className="input" id="m-value">
                     <p>ใส่ค่า θ</p>
                     {/* <label>μ = </label> */}
-                    <input type='number' placeholder="θ = " onChange={handleAngle} className='number'></input>
+                    <input type='number' placeholder="θ = " onChange={handleAngle} className='number' value={a_value}></input>
                 </div>
             </div>
         ),
