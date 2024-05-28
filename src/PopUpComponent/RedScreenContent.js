@@ -11,6 +11,11 @@ const RedScreenContent = {
         header: "เสาล้มแล้ว",
         content: ""
     }],
+    Section2_2: [{
+        //index0
+        header: "ไม้เกิดการเลื่อน",
+        content: ""
+    }],
     Section3_1: [{
         //index0
         header: "ลิ่มเกิดการเลื่อน",

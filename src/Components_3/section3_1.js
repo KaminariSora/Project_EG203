@@ -29,18 +29,33 @@ const Section3_1 = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const handleThetaValue = (event) => {
-        const theta = parseFloat(event.target.value);
+        let theta = parseFloat(event.target.value);
+        if(theta>90){
+            theta = 90
+        }
+        if(theta<0){
+            theta = 0
+        }
         setThetaValue(theta);
         console.log(theta)
     };
 
     const handleCoefValue = (event) => {
-        const coef = parseFloat(event.target.value);
+        let coef = parseFloat(event.target.value);
+        if(coef>1){
+            coef = 1
+        }
+        if(coef<0){
+            coef = 0
+        }
         setCoefValue(coef);
     };
 
     const handlePValue = (event) => {
-        const P = parseFloat(event.target.value);
+        let P = parseFloat(event.target.value);
+        if(P<0){
+            P = 0
+        }
         setInputP(P);
     };
 
@@ -125,15 +140,15 @@ const Section3_1 = () => {
             <div className="answer">
                 <div className="input" id="theta-value">
                     <p>ใส่ค่า θ</p>
-                    <input type="number" placeholder="θ =" onChange={handleThetaValue} className="number"></input>
+                    <input type="number" placeholder="θ =" onChange={handleThetaValue} className="number" value={thetaValue}></input>
                 </div>
                 <div className="input" id="coef-value">
                     <p>ใส่ค่า μ<sub>s</sub></p>
-                    <input type="number" placeholder="μs =" onChange={handleCoefValue} className="number"></input>
+                    <input type="number" placeholder="μs =" onChange={handleCoefValue} className="number" value={coefValue} step="0.1"></input>
                 </div>
                 <div className="input" id="p-value">
                     <p>ใส่ค่า P</p>
-                    <input type="number" placeholder="P =" onChange={handlePValue} className="number"></input>
+                    <input type="number" placeholder="P =" onChange={handlePValue} className="number" value={inputP}></input>
                 </div>
             </div>
             <div className='start-container'>
