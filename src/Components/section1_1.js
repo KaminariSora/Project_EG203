@@ -68,11 +68,20 @@ const Section1_1 = () => {
 
     const handleW_value = (event) => {
         const W = parseInt(event.target.value);
+        if(W<0){
+            W = 0;
+        }
         setW_value(W);
     };
 
     const handleM_value = (event) => {
-        const M = parseInt(event.target.value);
+        let M = parseFloat(event.target.value);
+        if(M>1){
+            M = 1;
+        }
+        if(M<0){
+            M = 0;
+        }
         setM_value(M);
     };
 
@@ -138,7 +147,7 @@ const Section1_1 = () => {
 
                 <div className="input" id="m-value">
                     <p>ใส่ค่า μ</p>
-                    <input type="number" placeholder="μ = " onChange={handleM_value} className="number"></input>
+                    <input type="number" placeholder="μ = " onChange={handleM_value} className="number" value={m_value} step="0.1"></input>
                 </div>
             </div>
             <footer>

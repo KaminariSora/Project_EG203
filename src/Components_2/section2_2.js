@@ -63,7 +63,7 @@ const PageSection2_2 = () => {
             <img className="logo" src="./Images/LogoApp.png"></img>
             <div className="title">ส่วนที่ 2 ข้อที่ 2</div>
             {isOpen && <ClosePopUp setIsOpen={setIsOpen} x={2}/>}
-            {SolutionOpen && <Solution setSolutionOpen={setSolutionOpen} setYellowOpen={setYellowOpen} textIndex={0} Section={"Section2"}/>}
+            {SolutionOpen && <Solution setSolutionOpen={setSolutionOpen} setYellowOpen={setYellowOpen} textIndex={0} Section={"Section2_2"}/>}
             {yellowOpen && <YellowPopUp setYellowOpen={setYellowOpen} DataList={Section2_2}/>}
             <div className="problem">
                 <img src={slides[0].image} style={imageStyle} id='section2_img'></img>
@@ -88,7 +88,7 @@ const PageSection2_2 = () => {
                     <p>input θ</p>
                     <label>{theta_value}° </label>
                     <div className='range-container'>
-                        <input type='range' min="0" max="180" onChange={handleTheta_value} className='range' value={theta_value}></input>
+                        <input type='range' min="0" max="90" onChange={handleTheta_value} className='range' value={theta_value}></input>
                     </div>
                 </div>
                 <div className='start-container'>

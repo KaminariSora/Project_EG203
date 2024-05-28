@@ -54,7 +54,7 @@ const PageSection2_1 = () => {
             setTheta(theta_value);
         }
         else if(!SolutionOpen){
-            setTheta(90);
+            setTheta(45);
         }
 
     }, [SolutionOpen]);
@@ -89,7 +89,7 @@ const PageSection2_1 = () => {
                     <p>input θ</p>
                     <label>{theta_value}° </label>
                     <div className='range-container'>
-                        <input type='range' min="0" max="180" onChange={handleTheta_value} className='range' value={theta_value}></input>
+                        <input type='range' min="0" max="90" onChange={handleTheta_value} className='range' value={theta_value}></input>
                     </div>
                 </div>
                 <div className='start-container'>
